@@ -16,3 +16,5 @@ footer: MIT Licensed | Copyright © 2018-present Will Wang
 ---
 
 # 这样
+
+PWA弹窗效果，注意要本地安装verpress
