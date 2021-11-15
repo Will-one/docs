@@ -1,6 +1,25 @@
+const moment = require("moment")
+
 module.exports = {
-    title: 'Hello VuePress',
+    base: '/vuepressBlog/',
+    title: 'Willone',
     description: 'Just playing around',
+    head: [
+        ['meta', { name: 'author', content: 'Willone' }],
+        ['meta', { name: 'keywords', content: 'vuepress,博客,前端' }],
+        ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ],
+    plugins: [
+        [
+            '@vuepress/last-updated',
+            {
+                transformer: (timestamp, lang) => {
+                    moment.locale(lang)
+                    return moment(timestamp).format('LLLL')
+                }
+            }
+        ]
+    ],
     themeConfig: {
         logo: '/assets/img/logo.png',
         nav: [
@@ -19,7 +38,7 @@ module.exports = {
                 items: [
                     {
                         text: 'Group1', items: [
-                            { text: 'Home', link: '/' },
+                            { text: 'Group', link: '/group/' },
                             { text: 'About', link: '/about/' },
                         ]
                     },
@@ -32,6 +51,16 @@ module.exports = {
                 ]
             },
             { text: 'External', link: 'https://google.com' },
-        ]
+        ],
+        sidebar: {
+            '/about/': [''],
+            '/group/': [
+                '',
+                'item1',
+                'item2'
+            ]
+
+        },
+        lastUpdated: '上次更新'
     }
 }
