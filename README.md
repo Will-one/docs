@@ -1,3 +1,6 @@
+[![Build Status](https://app.travis-ci.com/Will-one/vuepressBlog.svg?branch=main)](https://app.travis-ci.com/Will-one/vuepressBlog)
+[![GitHub issues](https://img.shields.io/github/issues/Will-one/vuepressBlog)](https://github.com/Will-one/vuepressBlog/issues)
+
 # docs
 vuepress Blog
 
