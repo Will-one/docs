@@ -1,5 +1,6 @@
 ---
 title: 'flex Part1'
+sidebarDepth: 2
 ---
 
 ## P3 flex原理

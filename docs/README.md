@@ -3,19 +3,19 @@ home: true
 # heroImage: /hero.png
 heroText: Willone
 tagline: 一个学到老活到老的程序猿
-actionText: 快速上手 →
+# actionText: 快速上手 →
 actionLink: /zh/guide/
 features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+- title: Technology driven
+  details: Ctrl+C and Ctrl+V are the centered high-efficiency coding modes, which can copy the most bugs in the least time.
+- title: Hardware driver
+  details: Enjoyed the stuttering experience of GTX960, and need to use Coding to ease emotions.
+- title: Life driver
+  details: Want to eat well, want to buy R9000K, salarymen.
 footer: MIT Licensed | Copyright © 2018-present Will Wang
 ---
 
-# 这样
-
-PWA弹窗效果，注意要本地安装verpress
-测试Travis CI
+## 个人的知识记录和分享中心
+::: tip ....
+技术的价值在分享和交流
+:::

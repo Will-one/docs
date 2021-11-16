@@ -19,5 +19,8 @@ module.exports = [
             }
         }
     ],
-    ['@vuepress/back-to-top']
+    ['@vuepress/back-to-top'],
+    ['@vuepress/medium-zoom',{
+        selector:'img.zoom-img'
+    }]
 ]

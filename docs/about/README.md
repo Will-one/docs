@@ -4,8 +4,6 @@
 title: 'lv money'
 ---
 
-# 热爱金钱
-
 ## love RMB
 
 ### 大发放
@@ -17,3 +15,9 @@ title: 'lv money'
 ## ere
 
 ## dfaf
+
+## aaa
+静态资源的根目录是public，by the way , 路由的跟页面是docs下的README.md
+![An image](/favicon.ico)
+
+<img class="zoom-img" :src="$withBase('/favicon.ico')" alt="fav">
