@@ -1,9 +1,17 @@
 module.exports = {
     '/about/': [''],
-    '/group/': [
+    '/frontend/html/': [''],
+    '/frontend/css/': [
         '',
-        'item1',
-        'item2',
+        'part1',
+        'part2',
         'flexpart1'
-    ]
+    ],
+    
+    '/frontend/javascript/': [''],
+    '/frontend/ajax/': [''],
+    '/frontend/es6/': [''],
+    '/frontend/promise/': [''],
+    '/frontend/axios/': [''],
+    '/frontend/vue/': [''],
 }

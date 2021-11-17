@@ -1,23 +1,13 @@
 ---
-# navbar: false
 # sidebar: auto
-title: 'lv money'
+title: '关于本站'
 ---
 
-## love RMB
+## 简介
 
-### 大发放
+### 建立初衷
+集中管理学习笔记，代码心得。
 
-## love USD
-
-## love KHR
-
-## ere
-
-## dfaf
-
-## aaa
+## 草稿
 静态资源的根目录是public，by the way , 路由的跟页面是docs下的README.md
-![An image](/favicon.ico)
-
 <img class="zoom-img" :src="$withBase('/favicon.ico')" alt="fav">
