@@ -1,10 +1,8 @@
 ---
 home: true
-# heroImage: /hero.png
+# heroImage: /icons/icon-152x152.png
 heroText: Willone
 tagline: 学到老活到老的程序猿
-# actionText: 快速上手 →
-actionLink: /zh/guide/
 features:
 - title: Technology driven
   details: Ctrl+C and Ctrl+V are the centered high-efficiency coding modes, which can copy the most bugs in the least time.
@@ -16,6 +14,6 @@ footer: MIT Licensed | Copyright © 2018-present Will Wang
 ---
 
 ## 知识记录和分享站点
-::: tip ....
+::: tip
 技术的价值在分享和交流
 :::

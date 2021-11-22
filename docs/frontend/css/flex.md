@@ -1,6 +1,5 @@
 ---
-title: 'flex 布局1'
-sidebarDepth: 2
+title: 'Flex 布局'
 ---
 
 ## P3 flex原理

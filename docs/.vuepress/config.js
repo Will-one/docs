@@ -6,13 +6,17 @@ const sidebarConf = require('./config/sidebarConf')
 module.exports = {
     base: '/vuepressBlog/',
     title: 'Willone',
-    description: 'Just playing around',
+    description: '玩命加载中',
     head: headConf,
     plugins: pluginsConf,
+    theme:'reco', // 使用reco主题
     themeConfig: {
         logo: '/assets/img/logo.png',
         nav: navConf,
         sidebar: sidebarConf,
-        lastUpdated: '上次更新'
+        lastUpdated: '上次更新',
+        
+        // reco 主题配置
+        subSidebar: 'auto', // reco全局开启自动子侧边栏
     }
 }

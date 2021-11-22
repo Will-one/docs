@@ -26,12 +26,26 @@ module.exports = [
         ]
     },
     {
+        text: '后端',
+        items: [
+            {text: 'Nodejs', link: ''},
+            {text: 'Nginx', link: ''},
+            {text: 'MongoDB', link: ''},
+            {text: 'Redis', link: ''}
+        ]
+    },
+    {
         text: '开发工具', items: [
             { text: 'Git', link:'https://git-scm.com/book/zh/v2'},
             { text: '兼容性查询', link:'https://caniuse.com/?search=flex'},
             { text: 'API请求测试', link:'https://httpbin.org/'},
+            { text: 'MDN', link:'https://developer.mozilla.org/zh-CN/'}
         ]
     },
-    { text: '本站点', link: '/' },
-    { text: '关于', link: '/about/' },
+    {
+        text: '关于', items: [
+            {text: '关于本站', link: '/about/'},
+            {text: '关于我', link: ''}
+        ]
+    }
 ]

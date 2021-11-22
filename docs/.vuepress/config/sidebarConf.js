@@ -2,12 +2,20 @@ module.exports = {
     '/about/': [''],
     '/frontend/html/': [''],
     '/frontend/css/': [
-        '',
-        'part1',
-        'part2',
-        'flexpart1'
+        {
+            title: 'CSS',
+            collapsable: false,
+            sidebarDepth: 2,
+            children: [
+                '',
+                'selector',
+                'units',
+                'boxModel',
+                'flex'
+            ]
+        },
     ],
-    
+
     '/frontend/javascript/': [''],
     '/frontend/ajax/': [''],
     '/frontend/es6/': [''],
