@@ -11,6 +11,10 @@ module.exports = {
                 'selector',
                 'units',
                 'boxModel',
+                'float',
+                'position',
+                'fontText',
+                'background',
                 'flex'
             ]
         },

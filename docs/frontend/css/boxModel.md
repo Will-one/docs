@@ -98,7 +98,7 @@ background-color:green;
 }
 ```
 
-## 51.盒子模型-外边距的重叠
+## P51 盒子模型-外边距的重叠
 在布局中**垂直方向上**的两个外边距会发生折叠。
 
 ### 1.兄弟元素间的垂直外边距重叠
@@ -116,7 +116,7 @@ background-color:green;
 2.4
 
 
-## 52.行内元素的盒模型
+## P52 行内元素的盒模型
 
 ### 行内元素的一些特点
 1.行内元素不支持设置宽高，都是用内容撑开的
@@ -139,4 +139,105 @@ display:block;
     hidden：隐藏（不可见，但是占位，渲染了）
 */
 visibility:visible;
+```
+## P53 浏览器的默认样式
+默认样式：通常情况下，浏览器会给元素设置默认样式。然而在开发中，我们不希望看到这样的情况，所以有以下有两个解决的办法。
+1.小项目小网页中，直接找到对应的有默认样式的元素，单独去除。
+```css
+*{
+    margin:0;
+    padding:0;
+}
+```
+2.大一些的项目中，直接引入**重置样式表**。可以去下载**https://meyerweb.com/eric/tools/css/reset/**
+或者引入**https://github.com/necolas/normalize.css/blob/v1/normalize.css**
+```javascript
+<link rel="stylesheet" href="./css/reset.css">
+<!-- <link rel="stylesheet" href="./css/normalizs.css"> -->
+<!--
+    重置样式表，专门对浏览器的样式进行重置
+    reset.css 直接去除浏览器的默认样式
+    normalize.css 对默认样式进行统一
+-->
+```
+
+
+## P58 盒子的大小
+```css
+box1{
+    width:100px;
+    height:100px;
+    padding:10px;
+    border:5px red soild;
+    
+    /*
+        默认情况下，盒子的可见框大小有内容区，内边距，边框决定。
+        box-sizing 用来设置盒子尺寸的计算方式（设置width和height的作用位置）
+            可选值：
+            content-box：默认值，宽度和高度用来设置内容区的大小。
+            border-box：宽度和高度设置 整个盒子可见框的大小。
+    */
+    box-sizing:border-box;
+    
+    /*
+        因为设置可见框大小，设置border-box有个好处
+        width和height设置多少，盒子的可见框就是多少
+    */
+}
+```
+
+## P59 轮廓阴影和圆角
+**outline**用来设置元素的轮廓，用法和**border**一样。区别在于不影响布局
+```css
+box1{
+    width:200px;
+    height:200px;
+    background-color:#bfa;
+    outline:10px red solid;
+}
+```
+**box-shadow**用来设置设置元素的阴影效果，不影响布局。
+```css
+box1{
+    widht:200px;
+    height:200px;
+    background-color:#bfa;
+    /*
+        box-shadow：用来设置元素的阴影效果，不影响页面布局。
+        第一个值：水平偏移量
+        第二个值：垂直偏移量
+        第三个值：模糊半径
+        第四个值：颜色（一般使用rgba透明色）
+    */
+    box-shadow:10px 10px 20px rgba(0,0,0,.4);
+}
+```
+
+**border-redius设置盒子**设置圆角，圆角设置的是圆的半径大小。
+```css
+box2{
+    width:200px;
+    height:200px;
+    background-color:#bfa;
+    /*
+        border—redius:用来设置圆角
+        
+        border-top-left—redius
+        border-top-right-redius
+        border-bottom-right-redius
+        水平半径和垂直半径，可以把那个角设置为椭圆的
+        border-bottom-left-redius：20px 50px；
+    */
+    
+    /*
+        一个值：4个角
+        两个值：左上&右下 右上&左下
+        三个值：左上 右上&左下 右下
+        四个值：左上 右上 左下 右下
+    */
+    border-redius:20px / 40px；
+    /*
+        要设置圆角，中间/分割，水平半径和垂直半径
+    */
+}
 ```
