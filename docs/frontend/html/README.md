@@ -1,37 +1,9 @@
 ---
-title: HTML
+title: '前言'
 ---
 
-[MDN HTML 文档](https://developer.mozilla.org/zh-CN/docs/Web/HTML)
+**超文本标记语言**（HTML——HyperText Markup Language）是构成 Web 世界的一砖一瓦。它定义了网页内容的含义和结构。除 HTML 以外的其它技术则通常用来描述一个网页的表现与展示效果（如 CSS），或功能与行为（如 JavaScript）。———— from MDN DESC
 
-## 实体
-在浏览器中写过个空格，默认被浏览器解析为一个空格
-
-在 HTML 中有些时候，我们不能直接书写一些特殊符号，需要使用 html 中的实体（转译字符）
-```
-&nbsp;  空格
-&gt;    大于
-&lt;    大于
-&copy;  版权
-```
-
-## meta标签
-用于设置网页原数据
-```
-<!-- html
-meta主要用于设置网页中的一些元数据，元数据不是给用户看
-    charset 指定网页的字符集
-    name  指定元数据的名称
-    content 指定数据的内容
-
-    实例1：keywords：表示网站的关键字，多个关键字间用逗号隔开
-    name:"keywords" content="html5,搜索引擎关键字"
--->
-<meta charset="UTF-8">
-<!-- 实例1：keywords 表示网站的关键字，多个关键字间用逗号隔开 -->
-<meta name="keywords" content="html5,willone">
-<!-- 实例2：description 指定网站的描述，会显示在搜索结果中，链接右下方的描述 -->
-<meta name="description" content="这是一个不知名的，但是用户黏着度很高的网站">
-<!-- 实例3：3秒后重定向到另一个链接 -->
-<!-- <meta http-equiv="refresh" content="3;url=https://www.baidu.com"> -->
-```
+::: tip
+以下笔记主要由个人整理自 [尚硅谷HTML教程](https://www.bilibili.com/video/BV1XJ411X7Ud?spm_id_from=333.788.b_636f6d6d656e74.8) 和 [MDN HTML文档](https://developer.mozilla.org/zh-CN/docs/Web/HTML) 。
+:::

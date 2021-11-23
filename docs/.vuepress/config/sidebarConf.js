@@ -1,6 +1,9 @@
 module.exports = {
     '/about/': [''],
-    '/frontend/html/': [''],
+    '/frontend/html/': [
+        '',
+        'base'
+    ],
     '/frontend/css/': [
         {
             title: 'CSS',
