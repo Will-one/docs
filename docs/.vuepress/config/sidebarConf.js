@@ -5,7 +5,7 @@ module.exports = {
             title: 'HTML',
             collapsable: false,
             sidebarDepth: 2,
-            chileren: [
+            children: [
                 '',
                 'html_base'
             ]
@@ -36,7 +36,7 @@ module.exports = {
             title: 'AJAX',
             collapsable: false,
             sidebarDepth: 2,
-            chileren: [
+            children: [
                 '',
                 'ajax_base'
             ] 
