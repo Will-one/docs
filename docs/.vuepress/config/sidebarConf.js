@@ -1,8 +1,15 @@
 module.exports = {
     '/about/': [''],
     '/frontend/html/': [
-        '',
-        'base'
+        {
+            title: 'HTML',
+            collapsable: false,
+            sidebarDepth: 2,
+            chileren: [
+                '',
+                'html_base'
+            ]
+        }
     ],
     '/frontend/css/': [
         {
@@ -24,7 +31,17 @@ module.exports = {
     ],
 
     '/frontend/javascript/': [''],
-    '/frontend/ajax/': [''],
+    '/frontend/ajax/': [
+        {
+            title: 'AJAX',
+            collapsable: false,
+            sidebarDepth: 2,
+            chileren: [
+                '',
+                'ajax_base'
+            ] 
+        }
+    ],
     '/frontend/es6/': [''],
     '/frontend/promise/': [''],
     '/frontend/axios/': [''],

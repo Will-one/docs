@@ -1,5 +1,9 @@
 ---
 title: '浮动和高度塌陷'
+categories:
+- frontend
+tags:
+- css
 ---
 
 ## P60 浮动的特性

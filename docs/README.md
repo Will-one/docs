@@ -2,7 +2,11 @@
 home: true
 # heroImage: /icons/icon-152x152.png
 heroText: Willone
-tagline: 学到老活到老的程序猿
+tagline: 学到老活到老
+bgImage: '/assets/img/bg2.jpg'
+bgImageStyle: {
+  height: '350px'
+}
 features:
 - title: Technology driven
   details: Ctrl+C and Ctrl+V are the centered high-efficiency coding modes, which can copy the most bugs in the least time.

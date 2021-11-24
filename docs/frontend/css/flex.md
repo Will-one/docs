@@ -1,5 +1,10 @@
 ---
 title: 'Flex 布局'
+categories:
+- frontend
+tags:
+- css
+- flex
 ---
 
 ## P3 flex原理

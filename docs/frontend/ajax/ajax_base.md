@@ -1,7 +1,8 @@
 ---
-title: axios 总览
+title: 'ajax文档'
 categories:
 - frontend
 tags:
-- axios
+- ajax
 ---
+

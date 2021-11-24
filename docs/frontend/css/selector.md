@@ -1,5 +1,9 @@
 ---
 title: 常用选择器
+categories:
+- frontend
+tags:
+- css
 ---
 
 ## P28 CSS的编写位置
