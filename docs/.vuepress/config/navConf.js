@@ -33,7 +33,8 @@ module.exports = [
             { text: 'Nodejs', link: '' },
             { text: 'Nginx', link: '' },
             { text: 'MongoDB', link: '' },
-            { text: 'Redis', link: '' }
+            { text: 'Redis', link: '' },
+            { text: 'Express', link: '' }
         ]
     },
     {

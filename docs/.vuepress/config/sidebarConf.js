@@ -30,7 +30,18 @@ module.exports = {
         },
     ],
 
-    '/frontend/javascript/': [''],
+    '/frontend/javascript/': [
+        {
+            title: 'JavaScript',
+            collapsable: false,
+            sidebarDepth: 2,
+            children: [
+                '',
+                'typeConversion',
+                'prototype'
+            ]
+        }
+    ],
     '/frontend/ajax/': [
         {
             title: 'AJAX',
