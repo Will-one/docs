@@ -38,7 +38,8 @@ module.exports = {
             children: [
                 '',
                 'typeConversion',
-                'prototype'
+                'prototype',
+                'closure'
             ]
         }
     ],
