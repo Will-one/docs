@@ -53,6 +53,14 @@ module.exports = [
         ]
     },
     {
+        text: '实用网站',
+        icon: 'fab fa-internet-explorer',
+        items: [
+            { text: 'Font Awesome', link: 'https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free' },
+            { text: 'MonkeyTyoe', link: 'https://monkeytype.com/' },
+        ]
+    },
+    {
         text: '关于', 
         icon: 'fas fa-book',
         items: [

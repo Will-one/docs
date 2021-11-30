@@ -15,11 +15,11 @@ tags:
 * 原型对象中有一个属性constructor，他指向函数对象
 ```js
 function Fun(){}
-console.log(Fun.prototype)//默认指向一个空对象，可以向其添加属性
+console.log(Fun.prototype) // 默认指向一个空对象，可以向其添加属性
 Fun.prototype.test = function(){
     console.log("向原型对象添加的方法")
 }
-console.log(Fun.prototype.constructor === Fun)//true,原型对象中的constructor指向函数对象
+console.log(Fun.prototype.constructor === Fun) // true,原型对象中的constructor指向函数对象
 ```
 
 :::tip
@@ -32,7 +32,7 @@ Fun2.prototype.test2 = function(){
     console.log("原型中的方法")
 }
 var fun2 = new Fun2()
-fun2.test2()//可以调用到原型中的方法
+fun2.test2() // 可以调用到原型中的方法
 ```
 ---
 
@@ -41,8 +41,8 @@ fun2.test2()//可以调用到原型中的方法
 * 每个实例对象都有__proto__，称为隐式原型
 * “实例对象”的__proto__的值为其对应“构造函数”的prototype的值
 ```js
-function Fn(){} //内部语句：this.prototype = {}
-var fn = new Fn() //内部语句：this.__proto__ = Fn.prototype
+function Fn(){} // 内部语句：this.prototype = {}
+var fn = new Fn() // 内部语句：this.__proto__ = Fn.prototype
 
 /* “实例对象”的__proto__的值为其对应“构造函数”的prototype的值 */
 console.log(Fn.prototype === fn.__proto__)//true
@@ -80,12 +80,12 @@ var fn = new Fn();
 /* 实例对象的隐式原型 和 其构造函数的显式原型指 */
 console.log(Fn.prototype)
 console.log(fn.__proto__)
-console.log(Fn.prototype === fn.__proto__)//true
+console.log(Fn.prototype === fn.__proto__) // true
 
-fn.test1()//test1
-fn.test2()//test2
+fn.test1() // test1
+fn.test2() // test2
 console.log(fn.toString())
-//fn.test3()//is not a function
+//fn.test3() // is not a function
 ```
 ---
 
@@ -110,7 +110,7 @@ console.log(Function.__proto__===Function.prototype) // true
 ```
 3. Object的属性prototype指向的原型实例是原型链的尽头（__proto__为null）
 ```js
-console.log(Object.prototype.__proto__)//null
+console.log(Object.prototype.__proto__) // null
 ```
 ---
 

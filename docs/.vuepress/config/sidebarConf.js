@@ -39,7 +39,11 @@ module.exports = {
                 '',
                 'typeConversion',
                 'prototype',
-                'closure'
+                'executionContexts',
+                'scope',
+                'closure',
+                'objectInherit',
+                'threadEvent'
             ]
         }
     ],

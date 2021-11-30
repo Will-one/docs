@@ -207,3 +207,142 @@ plan.changPlan()
 plan2.showMsg()
 plan2.changPlan()
 ```
+
+## P35 内存溢出与内存泄漏
+:::tip 前言
+闭包的缺点
+> * 函数执行完后，函数内的局部变量没有释放，占用内存时间会边长
+> * 容易造成内存泄漏
+
+解决
+> * 能不用闭包就不用
+> * 及时释放
+:::
+
+:::tip
+1. 内存溢出
+* 一种程序运行出现的错误
+* 当程序运行需要的内存超过了剩余的内存时，就会抛出内存溢出的错误
+:::
+```js
+//1.内存溢出(程序崩溃。不用运行，看看就好)
+var obj = {}
+for(var i = 0; i < 10000; i++){
+	obj[i] = new Array(100000)
+	console.log('---')
+}
+```
+
+:::tip
+2. 内存泄漏
+* 占用的内存没有被及时释放
+* 内存泄漏积累过多，就容易导致内存溢出
+* 常见的内存泄漏：
+    > * 意外的全局变量
+    > * 没有及时清理的计时器或者回调函数
+    > * 闭包
+:::
+```js
+/*********** 2.内存泄漏 ************/
+/* 意外的全局变量 */
+function fn(){
+    a = 3//没有用var定义变量，所以现在是全局的
+    console.log(a)
+}
+fn()//函数运行之后a没有被释放
+
+/* 循环定时器使用后忘记清理 */
+var intervalID =  setInterval(function(){
+    console.log('---')
+},1000)
+clearInterval(intervalID) // 这步不做，忘记清理，就会内存泄漏
+
+/* 闭包 */
+function fn2(){
+    var a = 1
+    function fn3(){
+        console.log(++a)
+    }
+    return fn3
+}
+var f = fn2()
+f()
+f = null // 没有指定这一步的话，a就一直不释放
+```
+---
+
+## P36 闭包小测试
+:::tip
+测试题1：
+:::
+```js
+/* 代码片段1，没有闭包 */
+var name = "The Window"
+var obj = {
+    name:"my object",
+    getNameFunc:function(){
+        return function(){
+            return this.name
+        }
+    }
+}
+// 片段1输出
+alert(obj.getNameFunc()())
+
+/**********************************/
+
+/* 代码片段2，有闭包 */
+var name = "The Window"
+var obj = {
+    name:"my object",
+    getNameFunc:function(){
+        var that = this
+        return function(){
+            return that.name // 引用了外部属性
+        }
+    }
+}
+// 片段2输出
+alert(obj.getNameFunc()())
+```
+
+<details>
+<summary>查看解析</summary>
+<pre>
+<code>
+// 代码片段1，没有闭包
+// 片段1输出
+alert(obj.getNameFunc()()) // The window
+...
+// 代码片段2，有闭包
+// 片段2输出
+alert(obj.getNameFunc()()) // my object
+</code>
+</pre>
+</details>
+
+:::tip
+测试题2
+:::
+```js
+/* 面试题2（了解即可） */
+function fun(n,o){
+    console.log(o)
+    return {
+        fun:function(m){
+            return fun(m,n)
+        }
+    }
+}
+
+var a = fun(0)//undefined
+a.fun(1) // 0,产生了新的闭包但是没有保存，被释放了，所以一直是0
+a.fun(2) // 0
+a.fun(3) // 0
+
+var b = fun(0).fun(1).fun(2).fun(3) // undefined,0,1,2
+
+var c = fun(0).fun(1) // undefined,0
+c.fun(2) // 1
+c.fun(3) // 1
+```
