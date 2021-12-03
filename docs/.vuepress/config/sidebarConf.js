@@ -54,12 +54,66 @@ module.exports = {
             sidebarDepth: 2,
             children: [
                 '',
-                'ajax_base'
+                'ajax_base',
+                'instruct',
+                'cors'
             ] 
         }
     ],
-    '/frontend/es6/': [''],
-    '/frontend/promise/': [''],
-    '/frontend/axios/': [''],
-    '/frontend/vue/': [''],
+    '/frontend/es6/': [
+        {
+            title: 'ES6',
+            collapsable: false,
+            sidebarDepth: 2,
+            children: [
+                '',
+                'let',
+                'destructuring',
+                'number',
+                'string',
+                'object',
+                'function',
+                'array',
+                'symbol',
+                'iterator',
+                'generator',
+                'promise',
+                'set-map',
+                'class',
+                'module',
+                'async',
+                'regex'
+            ]
+        }
+    ],
+    '/frontend/promise/': [
+        {
+            title: 'Promise',
+            collapsable: false,
+            sidebarDepth: 2,
+            children: [
+                ''
+            ]
+        }
+    ],
+    '/frontend/axios/': [
+        {
+            title: 'axios',
+            collapsable: false,
+            sidebarDepth: 2,
+            children: [
+                ''
+            ]
+        }
+    ],
+    '/frontend/vue/': [
+        {
+            title: 'Vue',
+            collapsable: false,
+            sidebarDepth: 2,
+            children: [
+                ''
+            ]
+        }
+    ],
 }
