@@ -93,7 +93,9 @@ module.exports = {
             collapsable: false,
             sidebarDepth: 2,
             children: [
-                ''
+                '',
+                'promise-base',
+                'property'
             ]
         }
     ],
@@ -103,7 +105,11 @@ module.exports = {
             collapsable: false,
             sidebarDepth: 2,
             children: [
-                ''
+                '',
+                'axios-base',
+                'config',
+                'axios-object',
+                'interceptors'
             ]
         }
     ],

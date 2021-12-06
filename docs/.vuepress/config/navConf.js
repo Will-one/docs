@@ -49,7 +49,8 @@ module.exports = [
             { text: 'Git', link: 'https://git-scm.com/book/zh/v2' },
             { text: '兼容性查询', link: 'https://caniuse.com/?search=flex' },
             { text: 'API请求测试', link: 'https://httpbin.org/' },
-            { text: 'MDN', link: 'https://developer.mozilla.org/zh-CN/' }
+            { text: 'MDN', link: 'https://developer.mozilla.org/zh-CN/' },
+            { text: 'ECharts', link: 'https://echarts.apache.org/en/index.html' }
         ]
     },
     {
