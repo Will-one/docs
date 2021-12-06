@@ -74,6 +74,7 @@ module.exports = {
                 'object',
                 'function',
                 'array',
+                'operator',
                 'symbol',
                 'iterator',
                 'generator',

@@ -104,3 +104,20 @@ const obj = Object.create(null,{
     }
 })
 ```
+
+## P58 ES10 对象方法扩展
+回顾：在ES8中新加入了Object.entries,可以把对象转化为二维数组
+
+这里的Object.fromEntries又把二维数组(或者传入map)转化为对象
+```js
+const obj = {
+    name:'willone',
+    hobby:['game','movie','photo'],
+    city:['KM','XA','PP']
+}
+let arr = Object.entries(obj)
+console.log(arr)
+
+let tranObj = Object.fromEntries(arr)
+console.log(tranObj)
+```

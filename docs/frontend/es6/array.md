@@ -49,3 +49,21 @@ console.log(arr.includes('aaa'))
 */
 console.log(2**3)//和Math.pow(2,3)效果一直
 ```
+
+## P60 ES10 数组方法扩展
+:::tip
+flat：
+* 将多维数组转化为低维数组
+* 接受一个数字作为参数，表示要降维几次。arr.flat(2)表示将三维数组转为一位数组
+flatMap：
+:::
+```js
+const arr = [1,2,3,4,[5,6]]
+console.log(arr.flat())
+
+const arr2 = [1,2,3,4,5]
+//使用数组的map方法，对每一个数组元素进行操作
+//如果处理的结果返回的是一个数组,用[]框起来。我们又不想最终结果是二维数组，那么就直接使用flatMap
+let arr3 = arr2.flatMap(item => [item * 3])
+console.log(arr3)
+```

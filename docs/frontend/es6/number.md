@@ -45,3 +45,30 @@ console.log(Math.trunc(3.5))
 //7. Math.sign 判断一个数到底为正数(返回1) 负数(返回-1) 还是零(返回0)
 console.log(Math.sign(0))
 ```
+
+## P67 ES11 BigInt类型
+:::tip
+BigInt类型
+* 主要用于更大的数值运算
+* BigInt类型不能直接和普通类型的数字做运算
+:::
+```js
+//大整形表示方法：在普通的数字后面加上一个n就可以了
+let n = 521n
+console.log(n,typeof n)
+
+//BigInt()函数进行类型转换
+//注意：不能用于浮点型数据
+let n2 = 123
+console.log(BigInt(n2))
+
+/********************大数值运算********************/
+let max = Number.MAX_SAFE_INTEGER
+console.log(max)
+console.log(max+1)
+console.log(max+2)//结果出错
+
+console.log(BigInt(max))
+console.log(BigInt(max)+BigInt(1))
+console.log(BigInt(max)+BigInt(2))
+```

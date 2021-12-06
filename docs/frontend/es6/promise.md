@@ -176,3 +176,34 @@ p.catch((reason)=>{
     console.warn(reason)
 })
 ```
+
+## P63 ES11 Promise.allSettled
+:::tip
+Promise.allSettled
+
+Promise.all
+* 用在批量异步任务场景
+:::
+```js
+//声明两个promise对象
+const p1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        reject('出错了')
+    }, 1000)
+})
+
+const p2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('商品数据 - 2')
+    }, 1000)
+})
+
+//调用 allSettled 方法
+//接收Promise对象，可以包在数组里面传入多个，不管每个的执行结果成功与否，会全部执行完，不会中断
+//返回一个Promise对象，只要传入的Promise有成功的，则返回的Promise成功。
+const result = Promise.allSettled([p1, p2])
+console.log(result)
+//类似的all方法，传入的参数也可以是一个包含多个Promise对象的数组，但是遇到reject的话就会中断执行
+//返回一个Promise对象，只要传入的Promise有失败的，则返回的Promise失败。
+// const result2 = Promise.all([p1,p2])
+```

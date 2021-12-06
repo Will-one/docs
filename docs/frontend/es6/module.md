@@ -58,3 +58,14 @@ ES6的模块化语法 export和import
     console.log(m3)
 </script>
 ``` 
+
+## P66 ES11 动态import
+:::tip
+实现了按需加载
+* 动态引用使用的是import函数：import()
+:::
+```html
+<button id="btn">点击</button>
+<script src="../js/P66_app.js"></script>
+```
+

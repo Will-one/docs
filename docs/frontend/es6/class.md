@@ -134,3 +134,30 @@ const p = new Phone()
 p.prop1 = 111
 console.log(p.prop1)
 ```
+
+## P62 ES11 私有属性
+```js
+class Person{
+    //共有属性
+    name
+    //私有属性,前面要加#号
+    #age
+    #weight
+    
+    //构造方法
+    constructor(name, age, weight){
+        this.name = name
+        this.age = age
+        this.weight = weight
+    }
+
+    info(){
+        console.log(this.age)
+    }
+}
+
+const p = new Person('willone',17,'60kg')
+
+// console.log(p.#age)//私有属性访问不了,报错
+p.info()// 使用方法在内部访问
+```

@@ -98,3 +98,11 @@ console.log(obj instanceof Person)
 /* 2.还有很多，去其他地方找专业的教程研究 */
 ```
 
+## P61 ES10 Symbol原型的描述
+```js
+// 创建一个symbol,传入一个字符串作为描述
+let s = Symbol('willone')
+
+//使用description，可以得到symbol里面的描述字符串
+console.log(s.description)
+```

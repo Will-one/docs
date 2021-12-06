@@ -103,3 +103,13 @@ const TEAM = ['spMan','sdMan','IRMan']
 TEAM.push('SeaMan')
 console.log(TEAM)
 ```
+
+P68 ES11 绝对全局对象globalThis
+:::tip
+globalThis 始终指向全局this
+- js中指向window
+- nodejs中指向global
+:::
+```js
+console.log(globalThis)
+```
