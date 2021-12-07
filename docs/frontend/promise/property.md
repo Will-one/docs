@@ -34,7 +34,7 @@ promise的结果 是 实例对象中的一个属性【PromiseResult】
 :::
 
 
-## P13 Promise 的基本流程
+## P12 Promise 的基本流程
 1. new Promise()
     * 对象pending状态
 2. 执行异步操作
@@ -45,7 +45,7 @@ promise的结果 是 实例对象中的一个属性【PromiseResult】
         * 对象rejected状态，调then里面第二个回调（reason）
             * 返回一个Promise
 
-## P14 then 和 catch
+## P13 then 和 catch
 :::tip
 * Promise构造函数：Promise(excutor){}
     * executor函数：执行器(resolve,reject)=>{}
@@ -67,3 +67,85 @@ promise的结果 是 实例对象中的一个属性【PromiseResult】
 * Promise.prototype.catch方法：(onRejected)=>{}
     * onRejected函数：失败的回调函数 (reason)=>{}
 :::
+
+## P14 resolve 方法
+:::tip
+Promise.resolve
+* 属于Promise构造函数，返回一个promise对象
+
+参数：
+* 如果传入的参数为 非Promise类型 ，则返回的结果为状态为成功的promise对象
+* 如果传入的参数为 Promise类型，则参数执行的结构决定了 resolve的结果
+:::
+```js
+let p1 = Promise.resolve('非Promise类型')
+console.log(p1)
+
+let p2 = Promise.resolve(new Promise((resolve, reject)=>{
+    resolve('ok')
+}))
+console.log(p2)//内层的状态决定了外层的状态
+```
+
+## P15 reject 方法
+:::tip
+Promise.reject
+* 属于Promise构造函数，返回一个失败的promise对象
+
+参数：
+* 无论传入什么类型，返回的都是一个失败的promise对象
+:::
+```js
+let p1 = Promise.reject('非Promise类型')
+console.log(p1)
+
+let p2 = Promise.reject(new Promise((resolve, reject)=>{
+    resolve('ok')
+}))
+console.log(p2)//内层的状态决定了外层的状态
+```
+
+## P16 all 方法
+:::tip
+Promise.all方法 (promises)=>{}
+* promises: 包含n个promise的数组
+
+说明：返回一个新的promise，只有所有的promise都成功才成功，只要有一个失败了就直接失败
+* 失败的话，返回的结果字段为失败的那个Promise的结果
+* 全部成功的话，返回的是一个数组，数组元素为每个promise参数的结果
+:::
+```js
+let p1 = new Promise((resolve, reject) => {
+    resolve('p1 ok')
+})
+let p2 = new Promise((resolve, reject) => {
+    resolve('p2 ok')
+})
+let p3 = new Promise((resolve, reject) => {
+    resolve('p3 ok')
+})
+
+const res = Promise.all([p1, p2, p3])
+console.log(res)//只要有一个失败，就失败
+```
+
+## P17 race 方法
+:::tip
+Promise.race方法：(promises) => {}
+* promises: 包含n个promise的数组
+
+说明：返回一个新的promise，第一个完成的promise的结果状态就是最终的结果状态
+:::
+```js
+let p1 = new Promise((resolve, reject) => {
+    resolve('p1 ok')
+    //reject('p1失败')
+})
+let p2 = Promise.reject('p2失败')
+let p3 = new Promise((resolve, reject) => {
+    resolve('p3 ok')
+})
+
+const res = Promise.race([p1, p2, p3])//第一个完成的promise的状态就是最终的状态
+console.log(res)
+```

@@ -95,7 +95,10 @@ module.exports = {
             children: [
                 '',
                 'promise-base',
-                'property'
+                'property',
+                'key-issue',
+                'async-await',
+                'promise-rewrite'
             ]
         }
     ],
