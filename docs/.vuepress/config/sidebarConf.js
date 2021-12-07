@@ -7,7 +7,9 @@ module.exports = {
             sidebarDepth: 2,
             children: [
                 '',
-                'html_base'
+                'html_base',
+                'label',
+                'multimedia'
             ]
         }
     ],
