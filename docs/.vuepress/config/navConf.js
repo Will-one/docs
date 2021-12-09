@@ -30,33 +30,38 @@ module.exports = [
         text: '后端',
         icon: 'fas fa-server',
         items: [
-            { text: 'Nodejs', link: '' },
-            { text: 'Nginx', link: '' },
-            { text: 'MongoDB', link: '' },
-            { text: 'Redis', link: '' },
-            { text: 'Express', link: '' }
+            { text: 'Nodejs', link: '/backend/nodejs/' },
+            { text: 'Nginx', link: '/backend/nginx/' },
+            { text: 'SQL', link: '/backend/sql/' },
+            { text: 'MongoDB', link: '/backend/mongodb/' },
+            { text: 'Redis', link: '/backend/redis/' },
+            { text: 'Express', link: '/backend/express/' }
         ]
     },
     {
-        text: '建站',
-        icon: 'fas fa-clone',
-        link: '/buildguider/'
+        text: '命令行',
+        icon: 'fas fa-server',
+        items: [
+            { text: 'Git', link: '/command/git/' },
+            { text: 'Linus', link: '/command/linux/' },
+            { text: 'DOS', link: '/command/dos/' },
+        ]
     },
     {
         text: '开发工具', 
         icon: 'fas fa-wrench',
         items: [
-            { text: 'Git', link: 'https://git-scm.com/book/zh/v2' },
-            { text: '兼容性查询', link: 'https://caniuse.com/?search=flex' },
-            { text: 'API请求测试', link: 'https://httpbin.org/' },
-            { text: 'MDN', link: 'https://developer.mozilla.org/zh-CN/' },
-            { text: 'ECharts', link: 'https://echarts.apache.org/en/index.html' }
+            { text: 'VScode', link: '/tools/vscode/' }
         ]
     },
     {
         text: '实用网站',
         icon: 'fab fa-internet-explorer',
         items: [
+            { text: '兼容性查询', link: 'https://caniuse.com/?search=flex' },
+            { text: 'API请求测试', link: 'https://httpbin.org/' },
+            { text: 'MDN', link: 'https://developer.mozilla.org/zh-CN/' },
+            { text: 'ECharts', link: 'https://echarts.apache.org/en/index.html' },
             { text: 'Font Awesome', link: 'https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free' },
             { text: 'MonkeyTyoe', link: 'https://monkeytype.com/' },
         ]

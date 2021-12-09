@@ -31,7 +31,6 @@ module.exports = {
             ]
         },
     ],
-
     '/frontend/javascript/': [
         {
             title: 'JavaScript',
@@ -128,4 +127,17 @@ module.exports = {
             ]
         }
     ],
+
+    // 实用工具 start
+    '/tools/git': [
+        {
+            title: 'Git',
+            collapsable: false,
+            sidebarDepth: 2,
+            children: [
+                '',
+            ]
+        }
+    ]
+    // 实用工具 end
 }
