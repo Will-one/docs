@@ -130,6 +130,20 @@ module.exports = {
     ],
     // #endregion
 
+    // 算法
+    // #region
+    '/algorithms/':[
+        {
+            title: '算法',
+            collapsable: false,
+            sidebarDepth: 2,
+            children: [
+                ''
+            ]
+        }
+    ],
+    // #endregion
+
     // 关于
     // #region
     '/about/': [

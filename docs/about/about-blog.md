@@ -1,5 +1,6 @@
 ---
 title: '本站'
+sticky: 1
 ---
 
 ## 初衷
@@ -10,6 +11,6 @@ title: '本站'
 :::
 
 ## 建站指南
-本网站主要使用 Vuepress + Vuepress reco 搭建，详情请参考以下链接：
+主要使用 Vuepress + Vuepress reco 搭建，详情请参考以下链接：
 * [VuePress](https://vuepress.vuejs.org/zh/)
 * [VuePress reco](https://vuepress-theme-reco.recoluan.com/)

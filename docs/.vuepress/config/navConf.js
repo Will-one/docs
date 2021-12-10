@@ -43,15 +43,26 @@ module.exports = [
         icon: 'fas fa-laptop-code',
         items: [
             { text: 'Git', link: '/command/git/' },
-            { text: 'Linus', link: '/command/linux/' },
+            { text: 'Linux', link: '/command/linux/' },
             { text: 'DOS', link: '/command/dos/' },
         ]
     },
+    { text: '算法', icon: 'fas fa-percentage', link: '/algorithms/' },
     {
         text: '开发工具', 
         icon: 'fas fa-wrench',
         items: [
-            { text: 'VScode', link: '/tools/vscode/' }
+            { text: 'VScode', link: '/tools/vscode/' },
+            { text: 'Xcode', link: '/tools/xcode/' },
+            { text: 'Postman', link: '/tools/postman/' }
+        ]
+    },
+    {
+        text: '项目', 
+        icon: 'fas fa-project-diagram',
+        items: [
+            { text: '项目1', link: '' },
+            { text: '项目2', link: '' }
         ]
     },
     {
