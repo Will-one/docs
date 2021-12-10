@@ -2,7 +2,7 @@ module.exports = [
     { text: '首页', link: '/', icon: 'fas fa-home' },
     {
         text: '前端',
-        icon: 'fas fa-laptop-code',
+        icon: 'fab fa-css3',
         items: [
             {
                 text: '基础', items: [
@@ -40,7 +40,7 @@ module.exports = [
     },
     {
         text: '命令行',
-        icon: 'fas fa-server',
+        icon: 'fas fa-laptop-code',
         items: [
             { text: 'Git', link: '/command/git/' },
             { text: 'Linus', link: '/command/linux/' },
@@ -66,12 +66,5 @@ module.exports = [
             { text: 'MonkeyTyoe', link: 'https://monkeytype.com/' },
         ]
     },
-    {
-        text: '关于', 
-        icon: 'fas fa-book',
-        items: [
-            { text: '关于本站', link: '/about/' },
-            { text: '关于我', link: '' }
-        ]
-    }
+    { text: '关于', link: '/about/', icon: 'fas fa-book' }
 ]

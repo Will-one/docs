@@ -1,5 +1,6 @@
 module.exports = {
-    '/about/': [''],
+    // 前端
+    // #region
     '/frontend/html/': [
         {
             title: 'HTML',
@@ -127,17 +128,20 @@ module.exports = {
             ]
         }
     ],
+    // #endregion
 
-    // 实用工具 start
-    '/tools/git': [
+    // 关于
+    // #region
+    '/about/': [
         {
-            title: 'Git',
+            title: '关于',
             collapsable: false,
             sidebarDepth: 2,
             children: [
-                '',
+                'about-blog',
+                'about-me'
             ]
         }
-    ]
-    // 实用工具 end
+    ],
+    // #endregion
 }
