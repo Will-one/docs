@@ -152,7 +152,7 @@ module.exports = {
             collapsable: false,
             sidebarDepth: 2,
             children: [
-                'about-blog',
+                '',
                 'about-me'
             ]
         }
