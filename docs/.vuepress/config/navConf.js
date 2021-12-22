@@ -74,6 +74,7 @@ module.exports = [
             { text: 'MDN', link: 'https://developer.mozilla.org/zh-CN/' },
             { text: 'ECharts', link: 'https://echarts.apache.org/en/index.html' },
             { text: 'Font Awesome', link: 'https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free' },
+            { text: 'Lodash', link: 'https://www.lodashjs.com/' },
             { text: 'MonkeyTyoe', link: 'https://monkeytype.com/' },
         ]
     },
