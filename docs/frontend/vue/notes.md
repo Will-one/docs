@@ -183,3 +183,115 @@ v-model等价于：在表单类元素上通过 绑定value 和 事件input 实�
     </template>
 </子组件>
 ```
+
+## 注意对象之间赋值的问题
+* 对象直接赋值给另一个参数，那么两个参数就指向同一个地址，此时通过其中一个参数进行的修改，将会影响到使用这个对象的所有地方
+* 此时可以用对象扩展解构后再赋值，避免这个问题 
+```js
+// (浅拷贝)
+let obj2={...obj1}
+```
+
+* 对于数据比较复杂的情况，比如对象里面又有对象，有数组对象等等，浅拷贝就不行了，要用深拷贝(用lodash)。
+
+手写浅拷贝和深拷贝
+```js
+let obj = {a:1,b:2}
+let newobj = JSON.parse(JSON.stringify(obj))
+```
+```js
+// 循环遍历
+export const deepCopy = (obj)=>{
+    if(typeof obj != 'object'){
+        return obj
+    }
+
+    var newObj = {}
+    obj.forEach(item=>{
+        newObj[item] = deepCopy(obj[item])
+    })
+
+    return newObj
+}
+```
+
+## 字符串方法trim
+* string.trim() 移除字符串守卫空白
+
+## 数组遍历some()
+* 遍历的数组元素中，至少有一个满足回调函数就返回true
+
+## 为响应式数据添加新字段的时候注意确保他是响应式的
+* 可以使用Vue.set()
+* 对于数组元素的话，push设计好可以被检测到的修改
+
+## 父组件调用子组件
+* 可以在调用子组件处绑定 ref属性
+* this.$refs.子组件 就可以获取到子组件的实例对象。
+* 通过获取子组件的实例对象，就能访问和调用子组件的数据和方法
+::: tip 实际运用
+需要点击父组件中的按钮，触发子组件的接口调用。
+此时将接口调用写在子组件的mounted是错误的，可以在父组件中通过ref属性获取子组件实例来调用封装请求的函数
+:::
+
+## 数组的map方法
+map() 方法创建一个新数组，这个新数组由原数组中的每个元素都调用一次提供的函数后的返回值组成。
+
+
+## vue清理数据技巧
+```js
+// 清理数据【小技巧】
+// Object.assign 是ES6中新增的方法，可以合并对象
+// 组件实例this._data 可以操作data中的响应式数据
+// 而this.$options可以获取组件的配置对象，this.$options.data()就调用了data配置对象【本来就return一个对象】
+// 用this.$options.data()返回的配置对象合并了
+Object.assign(this._data,this.$options.data())
+Object.assign(this._data,this.$options.data.call(this))
+```
+
+## reduce
+reduce函数可以接收一个回调函数作为累加器,第二个参数接受初始值
+```js
+// 空数组就是prev的初始值。
+// 回调的第一个参数prev是初始值获取计算后的返回值
+let TEMArr = arr.reduce((prev,item)=>{
+    item.id...
+    ...
+    prev.push(...)
+    
+    return prev
+},[])
+```
+
+## 深度选择器
+### 先说下scope的作用
+* 对于某一个组件，如果style添加上scoped属性，会给当前组件的结构都添加上一个 data-v-xxx的自定义样式。
+* 审查元素的时候可以看到vue是通过属性选择器 例如 h3[data-v-xxx] 来给组件中的元素添加上样式的。
+* 子组件的根节点（也拥有父组件中因为scoped而添加上的自定义属性）。如果子组件的根节点标签和父组件中样式相同，也会添加上相应样式。
+```js
+// 父组件
+<template>
+    <div>
+        <h3>父组件</h3>
+        <child/>
+    </div>
+</template>
+<style scoped>
+h3{
+    color:red;
+}
+</style>
+```
+```js
+// 子组件在这种情况下也会体现h3的样式
+<template>
+    <h3>子组件</h3>
+</template>
+```
+
+* 如果父组件的样式scoped，想要彻底能够影响到子组件。这种情况我们可以使用深度选择器
+::: tip 
+* 原生css >>>
+* less /deep/
+* scss ::v-deep
+:::
