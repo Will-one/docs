@@ -54,23 +54,23 @@ border-right：none；
 
 
 ## P49 水平方向的布局
-子元素存在于父元素的内容区中，此时的子元素必须满足一个等式：
+子元素存在于父元素的内容区中，此时的子元素必须满足一个等式：  
 **margin-left + border-left + padding-left + width + padding-right +border-right + margin-right = 父元素的内容区的width**
 
-当不满足这个等式的时候，会发生过渡约束，则等式会自动调整。
-    -调整的情况
-        -如果这 7 个值里面都没有 auto 的时候，则浏览器会自动调整 margin-right 值使等式成立
-        -这 7 个值里面有三个值可以设置为auto
-            -width
-            -margin-left
-            -margin-right
-        -如果某个值为auto，则会调整auto的值
-        -如果有多个值为auto，并且width也是auto的时候，width会调整为最大，设置为auto的margin值会为0
+当不满足这个等式的时候，会发生过渡约束，则等式会自动调整。  
+* 调整的情况
+ * 如果这 7 个值里面都没有 auto 的时候，则浏览器会自动调整 margin-right 值使等式成立
+ * 这 7 个值里面有三个值可以设置为auto
+  1. width
+  2. margin-left
+  3. margin-right
+ * 如果某个值为auto，则会调整auto的值
+ * 如果有多个值为auto，并且width也是auto的时候，width会调整为最大，设置为auto的margin值会为0
        
-        -如果两个magin为0，则会使子元素在父元素内容区中垂直居中
+ * 如果两个margin为0，则会使子元素在父元素内容区中垂直居中
 ```css
 width：xxxpx；
-magin：0 auto；
+margin：0 auto；
 ```
 
 

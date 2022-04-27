@@ -6,15 +6,18 @@ tags:
 - css
 ---
 
-## P69 相对定位
 position的可选值：
-1.static 默认值，没有开启定位。
-2.relative 相对定位
-3.absolute 绝对定位
-4.fixed 固定定位（重点看下）
-5.sticky 粘滞定位
+1. **static** : 默认值，没有开启定位。
+2. **relative** : 相对定位
+3. **absolute** : 绝对定位
+4. **fixed** : 固定定位（重点看下）
+5. **sticky** : 粘滞定位
 
-首先当position不为static时开启定位，可以设置偏移量offset
+## P69 相对定位
+
+首先当 position 不为 static 时开启定位，可以设置偏移量 offset 。
+
+当 position 为 relative 时开启相对定位。
 ```css
 .box1{
     width:100px;
@@ -35,7 +38,9 @@ position的可选值：
 }
 ```
 ## P70 绝对定位（常用）
-当position为absolute的时候开启绝对定位。**元素脱离文档流**
+当 position 为 absolute 的时候开启绝对定位。**元素脱离文档流**
+
+**子绝父相** : 后代元素使用绝对定位时，会基于开启了定位的祖先元素进行定位，所以最好在包含块上开启相对定位。
 ```css
 /* box1是box2的父元素 */
 
@@ -69,27 +74,37 @@ position的可选值：
 }
 ```
 ## P71 固定定位（fixed）
-将position设置为fixed之后开启固定定位
+将 position 设置为 fixed 之后开启固定定位
 
 固定定位相当于也是一种绝对定位。特点和绝对定位几乎相同
-不同点：固定定位永远参照于浏览器的**视口**（就是你的显示器显示的那部分网页）进行定位
+
+**不同点** : 固定定位永远参照于浏览器的 **视口**（浏览器视窗）进行定位
 ```css
 .box1{
     /* 固定定位相对于 浏览器视窗进行定位。 例如：页面滚动位置也不变的广告*/
-    position:fixed；
+    position:fixed;
 }
 ```
 
 ## P72 粘滞定位（兼容性一般）
-特点和相对定位类似。position为sticky是开启。
-类似网站中竖直放置的导航条。
+特点和相对定位类似。position 为 sticky 时开启。  
+类似网站中竖直放置的导航条。   
+```css
+<!-- 
 在触及给的偏移量前，随着窗口滚动。
-```
 （元素离顶部400px，开启粘滞定位然后top:100px，滚动条向下滚，只要元素离顶部多于100，元素随着页面滚动）
-```
+-->
+.box1{
+    width: 100px;
+    height: 100px;
+    position: sticky;
+    top:100
+}
+<!--
 触及给的偏移量后，粘滞在页面中。不再随窗口滚动。
-```
 （当元素离顶部等于100px了，那么元素就不随页面滚动，而是保持在视口中。类似吸顶效果）
+-->
+
 ```
 
 ## P73 绝对定位元素的位置
@@ -125,3 +140,6 @@ top + margin-top + border-left +......+ bottom
 ```
 Note：开启了定位的元素可以设置offset，可以用z-index
 
+
+transform
+transition
