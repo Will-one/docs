@@ -11,6 +11,7 @@ module.exports = [
           { text: "CSS", link: "/frontend/css/" },
           { text: "JavaScript", link: "/frontend/javascript/" },
           { text: "AJAX", link: "/frontend/ajax/" },
+          { text: "jQuery", link: "/frontend/jquery/" },
         ],
       },
       {

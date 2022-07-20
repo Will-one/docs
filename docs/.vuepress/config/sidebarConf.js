@@ -25,7 +25,9 @@ module.exports = {
         "background",
         "table",
         "transitionAndAnimation",
+        "less",
         "flex",
+        "mobile",
         "notes",
       ],
     },
@@ -39,6 +41,7 @@ module.exports = {
         "",
         "typeConversion",
         "prototype",
+        "objectAndFunction",
         "executionContexts",
         "scope",
         "closure",
@@ -53,6 +56,14 @@ module.exports = {
       collapsable: false,
       sidebarDepth: 2,
       children: ["", "ajax_base", "instruct", "cors"],
+    },
+  ],
+  "/frontend/jquery/": [
+    {
+      title: "AJAX",
+      collapsable: false,
+      sidebarDepth: 2,
+      children: ["", "jquery_base"],
     },
   ],
   "/frontend/es6/": [
