@@ -33,12 +33,22 @@ module.exports = [
     text: "后端",
     icon: "fas fa-server",
     items: [
-      { text: "Nodejs", link: "/backend/nodejs/" },
-      { text: "Nginx", link: "/backend/nginx/" },
-      { text: "SQL", link: "/backend/sql/" },
-      { text: "MongoDB", link: "/backend/mongodb/" },
-      { text: "Redis", link: "/backend/redis/" },
-      { text: "Express", link: "/backend/express/" },
+      {
+        text: "技术栈",
+        items: [
+          { text: "Nodejs", link: "/backend/nodejs/" },
+          { text: "Nginx", link: "/backend/nginx/" },
+          { text: "SQL", link: "/backend/sql/" },
+          { text: "MongoDB", link: "/backend/mongodb/" },
+          { text: "Redis", link: "/backend/redis/" },
+        ]
+      },
+      {
+        text: "框架",
+        items: [
+          { text: "Express", link: "/backend/express/" },
+        ]
+      }
     ],
   },
   {

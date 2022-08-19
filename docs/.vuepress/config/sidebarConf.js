@@ -60,7 +60,7 @@ module.exports = {
   ],
   "/frontend/jquery/": [
     {
-      title: "AJAX",
+      title: "jQuery",
       collapsable: false,
       sidebarDepth: 2,
       children: ["", "jquery_base"],
@@ -131,6 +131,48 @@ module.exports = {
       sidebarDepth: 2,
       children: ["", "canvas", "svg"],
     },
+  ],
+  // #endregion
+
+  // 后端
+  // #region
+  "/backend/nodejs/":[
+    {
+      title: "Node.js",
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        "", 
+        "fs-module", 
+        "path-module", 
+        "http-module", 
+        "modularization",
+        "npm&package"
+      ],
+    }
+  ],
+  "/backend/express/":[
+    {
+      title: "Express",
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        "", 
+        "base", 
+        "middleware",
+        "express-cors"
+      ],
+    }
+  ],
+  "/backend/mongodb/":[
+    {
+      title: "MongoDB",
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        "",
+      ],
+    }
   ],
   // #endregion
 
