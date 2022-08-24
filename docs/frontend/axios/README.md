@@ -7,7 +7,7 @@ tags:
 ---
 
 ::: tip
-以下笔记主要由个人整理自 [尚硅谷 JavaScript 基础教程](https://www.bilibili.com/video/BV1wr4y1K7tq) 、 和 [axios github地址](https://github.com/axios/axios) 。
+以下笔记主要由个人整理自 网络教程 、 和 [axios github地址](https://github.com/axios/axios) 。
 :::
 
 ## 提前了解

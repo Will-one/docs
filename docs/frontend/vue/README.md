@@ -7,5 +7,5 @@ tags:
 ---
 
 ::: tip
-具体查看 [Vue 官方文档](https://cn.vuejs.org/) 和 [尚硅谷 Vue 教程](https://www.bilibili.com/video/BV1Zy4y1K7SH) 。
+具体查看 网络教程 和 [Vue 官方文档](https://cn.vuejs.org/)。
 :::

@@ -176,6 +176,21 @@ module.exports = {
   ],
   // #endregion
 
+  // 命令行
+  // #region
+  "/command/git/":[
+    {
+      title: "Git",
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        "", 
+        "tutorial"
+      ],
+    }
+  ],
+  // #endregion
+
   // 算法
   // #region
   "/algorithms/": [

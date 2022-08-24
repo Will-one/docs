@@ -10,9 +10,9 @@ tages:
 ## 下载并安装
 * 选择以下其中一种方式即可
 ### 方式一：官网下载
-    1. [官网下载地址](https://www.mongodb.com/try/download/community)，选择社区版
-    2. 将下载好的包解压，可以将解压缩后的文件夹重命名为mongodb（或者其他）
-    3. 将mongodb放到路径：/usr/local 中。自此安装完成。
+1. [官网下载地址](https://www.mongodb.com/try/download/community)，选择社区版
+2. 将下载好的包解压，可以将解压缩后的文件夹重命名为mongodb（或者其他）
+3. 将mongodb放到路径：/usr/local 中。自此安装完成。
 
 ### 方式二：终端curl命令下载安装
 1. 进入 /usr/local
