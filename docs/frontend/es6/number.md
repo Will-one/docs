@@ -18,7 +18,7 @@ function equal(a, b){
         return false
     }
 }
-console.log(0.1 - 0.2 === 0.3)//false
+console.log(0.1 + 0.2 === 0.3)//false
 console.log(equal(0.1+0.2, 0.3))//true
 
 //1. 二进制和八进制
@@ -34,16 +34,16 @@ console.log(Number.isNaN(10+undefined))
 
 //4. Number.parseInt Number.parseFloat字符串转整数
 let a = '100px'
-console.log('parseInt 100px:'+Number.parseInt(a))
+console.log('parseInt 100px:'+Number.parseInt(a))//100
 
 //5. Number.isInteger 判断一个数是否为整数
-console.log(Number.isInteger(5))
-console.log(Number.isInteger(2.5))
+console.log(Number.isInteger(5))// true
+console.log(Number.isInteger(2.5))// false
 //6. Math.trunc 将数字的小数部分抹掉
-console.log(Math.trunc(3.5))
+console.log(Math.trunc(3.5))//3
 
 //7. Math.sign 判断一个数到底为正数(返回1) 负数(返回-1) 还是零(返回0)
-console.log(Math.sign(0))
+console.log(Math.sign(0))// 0
 ```
 
 ## P67 ES11 BigInt类型
@@ -55,7 +55,7 @@ BigInt类型
 ```js
 //大整形表示方法：在普通的数字后面加上一个n就可以了
 let n = 521n
-console.log(n,typeof n)
+console.log(n,typeof n)// 512n bigint
 
 //BigInt()函数进行类型转换
 //注意：不能用于浮点型数据
@@ -64,11 +64,13 @@ console.log(BigInt(n2))
 
 /********************大数值运算********************/
 let max = Number.MAX_SAFE_INTEGER
-console.log(max)
-console.log(max+1)
-console.log(max+2)//结果出错
+// 不使用BigInt类型运算
+console.log(max) // 9007199254740991
+console.log(max+1) // 9007199254740992
+console.log(max+2) // 9007199254740992 结果出错
 
-console.log(BigInt(max))
-console.log(BigInt(max)+BigInt(1))
-console.log(BigInt(max)+BigInt(2))
+// 使用BigInt类型运算
+console.log(BigInt(max)) // 9007199254740991n
+console.log(BigInt(max)+BigInt(1)) // 9007199254740992n
+console.log(BigInt(max)+BigInt(2)) // 9007199254740993n
 ```

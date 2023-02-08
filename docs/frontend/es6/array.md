@@ -47,7 +47,7 @@ console.log(arr.includes('aaa'))
 /*
 2.幂运算** 
 */
-console.log(2**3)//和Math.pow(2,3)效果一直
+console.log(2**3)//和Math.pow(2,3)效果一致
 ```
 
 ## P60 ES10 数组方法扩展
@@ -55,6 +55,7 @@ console.log(2**3)//和Math.pow(2,3)效果一直
 flat：
 * 将多维数组转化为低维数组
 * 接受一个数字作为参数，表示要降维几次。arr.flat(2)表示将三维数组转为一位数组
+
 flatMap：
 :::
 ```js

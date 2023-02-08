@@ -174,6 +174,16 @@ module.exports = {
       ],
     }
   ],
+  "/backend/java/":[
+    {
+      title: "MongoDB",
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        "",
+      ],
+    }
+  ],
   // #endregion
 
   // 命令行

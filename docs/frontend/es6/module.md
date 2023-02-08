@@ -68,4 +68,18 @@ ES6的模块化语法 export和import
 <button id="btn">点击</button>
 <script src="../js/P66_app.js"></script>
 ```
+```js
+/* P66_app.js */
+
+//获取元素
+const btn = document.getElementById('btn')
+
+btn.onclick = function(){
+    //使用import函数实现动态导入
+    // 返回的结果是一个promise对象，成功的值就是引入文件中暴露的对象
+    import('./P66_hello.js').then(m => {
+        m.hello()
+    })
+}
+```
 

@@ -276,7 +276,7 @@ btns[1].onclick = function(){
 ## P23-P24 axios
 > 热门 ajax 工具库 axios
 >
-> 使用axios前需要对promise有所了解 [Promise文档](/frontend/promise)
+> 使用axios前需要对promise有所了解 [Promise文档](../promise)
 
 axios官方多种引入方式
 > * 1.npm install axios

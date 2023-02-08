@@ -59,7 +59,7 @@ game[newMethods.down] = function(){
     console.log('新向上')
 }
 console.log(game)
-game[newMethods.up]()//掉用Sybol的时候，添加的时候是什么名字，就需要写什么名字
+game[newMethods.up]()//调用Sybol的时候，添加的时候是什么名字，就需要写什么名字
 
 /*************** 为对象添加Symbol类型属性方法二 ***************/
 let sb1 = Symbol('rush')
@@ -68,24 +68,31 @@ let company = {
     [sb1]:function(){
         console.log('只是Symbol')
     },
+    /* Symbol('build')生成的标识不是唯一的，这样定义是无法调用的 */
     [Symbol('build')](){
-        console.log(`Symbol+对象简化+模板字符传：公司名${this.name}`)
+        console.log(`Symbol+对象简化+模板字符串：公司名${this.name}`)
+    },
+    /* Symbol.for('build')生成的标识是唯一的，可以调用 */
+    [Symbol.for('build')](){
+        console.log(`Symbol+对象简化+模板字符串：公司名${this.name}`)
     }
 }
 console.log(company)
-company[sb1]()//这样可以调用，但是sb1下面那个就不知道怎么调用了
+company[sb1]()//可以调用。
+// company[Symbol('build')]() // 无法调用
+company[Symbol.for('build')]() // 可以调用
 ```
 
 ## P17 Symbol的内置值
 ```js
 /* 
 Symbol的内置值相当于是Symbol这个类型的一些内置的方法吧，具体的找其他的教程看
-    */
+*/
 
 /* 
 1.Symbol.hasInstance
     * 当其他对象使用instance运算符，判断是否为该对象的实例时，会调用这个方法
-    */
+*/
 class Person{
     static [Symbol.hasInstance](param){
         console.log(param)

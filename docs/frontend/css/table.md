@@ -15,7 +15,7 @@ table {
   /* border-spacing 指定边框的距离 */
   /* border-spacing: 0px; */
 
-  /* border-spacing 设置边框的合并 */
+  /* border-collapse 设置边框的合并 */
   /* 设置完边框间没有间隙，所以border-spacing就失效了 */
   border-collapse: collapse;
 }

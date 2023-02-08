@@ -125,7 +125,6 @@ function a(){}
 var a;
 console.log(typeof a) // function
 ```
----
 
 :::tip
 测试题3
@@ -135,8 +134,21 @@ console.log(typeof a) // function
 if(!(b in window)){
     var b = 1
 }
-console.log(b) // undefined
+console.log(b) // 输出什么？
 ```
+<details>
+<summary>查看解析</summary>
+<pre>
+<code>
+变量提升后相当于：
+var b
+if(!(b in window)){
+    b = 1
+}
+console.log(b) // undefined
+</code>
+</pre>
+</details>
 
 :::tip
 测试题4
@@ -146,5 +158,19 @@ var c = 1
 function c(c){
     console.log(c)
 }
-c(2) // c is not a function
+c(2) // 输出什么？
 ```
+<details>
+<summary>查看解析</summary>
+<pre>
+<code>
+变量提升后相当于：
+var c
+function c(c){
+    console.log(c)
+}
+c = 1
+c(2) // c is not a function
+</code>
+</pre>
+</details>

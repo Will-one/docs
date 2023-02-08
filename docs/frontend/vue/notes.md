@@ -79,37 +79,53 @@ this.$bus.$off('getMsg')
 
 ### 5. vuex
 常用
+
 ### 6. 插槽slot
 * 默认插槽 具名插槽 作用域插槽
 
+
+## event深入
+事件：
+ 原生dom事件（系统事件）
+ 自定义事件
+
+1. 原生DOM标签---可以绑定系统事件---click单击事件等等
+2. 组件标签---如果直接绑定类似click这样的事件，会被判断为是自定义事件，不会触发。需要使用修饰符@click.native这样的形式
+    * 这样的形式其实是给子组件的根节点绑定了点击时间---利用了事件的委派
+
 ## v-model 深入
-* v-model 实现原理
+1. v-model 实现原理
 ::: tip
 v-model等价于：在表单类元素上通过 绑定value 和 事件input 实现
-* v-on:value 或者 :value 数据绑定
+* v-bind:value 或者 :value 数据绑定
 * @input在每次输入改变时【不用失焦】调用
 
-两者配合使用的效果和 **v-model** 一样
+原生DOM中是有oninput事件的，它通常结合表单元素一起使用，当表单元素文本内容发生改变时触发一次回调
+和change事件很像，但是change事件是需要失焦后才触发回调的
+
+vue2中可以通过 :value 和 input事件 两者配合实现和 **v-model** 一样的双向绑定的效果
 :::
+
 ```html
 <input type="text" v-model="msg" />
 <!-- 等价于 -->
+<!-- :value单项绑定 -->
+<!-- @input="msg = $event.target.value"触发回调后，利用事件对象取得value对data里的msg进行赋值 -->
 <input
     :value="msg" 
     @input="msg = $event.target.value"
 />
 ```
-* v-model 拓展运用到组件上
+
+2. v-model 拓展运用到组件上（实现父子组价数据通信）
 ::: warning
 由上可引出一种用法，在组件中也可以使用v-model
 * 组件实例上的 :value 和 @input，不再是数据绑定和原生event，而是props参数和自定义事件
 * 于是可以用v-model替代组件实例上的:value 和 @input，同样可以实现父子组件的数据同步
 :::
-``` html
-<!-- 
-使用: value 和 @input 
--->
 
+* 使用: value 和 @input 
+``` html
 <!-- 父组件中使用子组件 :value 和 @input 是 props参数 和 自定义事件 -->
 <!-- $event接受子组件抛出的值 -->
 <CustomerInput :value="msg" @input="msg = $event" />
@@ -118,11 +134,9 @@ v-model等价于：在表单类元素上通过 绑定value 和 事件input 实�
 <!-- 子组件中 $emit 的第二个参数可以将一个值抛出，在父组件中以 $event 或者方法中的形参接收 -->
 <input :value="value" @input="$emit('input',$event.target.value)">
 ```
-``` html
-<!-- 
-使用: v-model 
--->
 
+* 使用：v-model
+``` html
 <!-- 父组件中使用子组件 在组件上使用v-model，相当于使用了:value 和 @input -->
 <CustomerInput v-model="msg" />
 

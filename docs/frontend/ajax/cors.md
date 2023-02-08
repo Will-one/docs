@@ -36,7 +36,7 @@ function abc(data){
 }
 ```
 3. 服务端返回的是一个函数调用，参数也写在服务端
-[JSONP Serve](/frontend/express)
+[JSONP Serve](../../backend/express)
 
 ### 示例
 ```html

@@ -81,6 +81,7 @@ tags:
 
       <!-- 提交按钮【常用button标签】 -->
       <input type="submit" value="提交" />
+      <!-- ！根据HTML5规范，请始终为button标签提供type属性 -->
       <button type="submit">提交</button>
     </form>
 ```

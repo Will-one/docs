@@ -34,14 +34,14 @@ function Person(){}
 Person.name = 'willone'//这个就属于构造函数的静态成员。创建的实例中不会包含
 
 let p = new Person()
-console.log(p)
+console.log(p) // Person {}
 
 /* 如果使用class的话，就可以使用static关键字来声明静态成员 */
 class Ps{
     static type = 'human'//属于类的静态变量
 } 
 let p1 = new Ps()
-console.log(p1)
+console.log(p1) // Ps {}
 ```
 
 ## P35-P37 构造函数 和 class 继承

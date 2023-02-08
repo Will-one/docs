@@ -203,7 +203,7 @@ const p2 = new Promise((resolve, reject) => {
 //返回一个Promise对象，只要传入的Promise有成功的，则返回的Promise成功。
 const result = Promise.allSettled([p1, p2])
 console.log(result)
-//类似的all方法，传入的参数也可以是一个包含多个Promise对象的数组，但是遇到reject的话就会中断执行
+//类似的all方法，传入的参数也可以是一个包含多个Promise对象的数组，但是all遇到reject的话就会中断执行
 //返回一个Promise对象，只要传入的Promise有失败的，则返回的Promise失败。
 // const result2 = Promise.all([p1,p2])
 ```

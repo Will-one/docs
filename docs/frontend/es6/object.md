@@ -91,7 +91,7 @@ console.log(m)
 
 //Object.getOwnPropertyDescriptors 返回对象属性的描述对象（下面有演示。会显示在使用Object.create创建对象的时候可以设置的一些属性）
 console.log(Object.getOwnPropertyDescriptors(person))
-//参照一下create创建对象，第一个参数是原型对象，第一个参数是一个描述对象
+//参照一下create创建对象，第一个参数是原型对象，第二个参数是一个描述对象
 const obj = Object.create(null,{
     //设置的name，必须是一个对象
     name:{
@@ -117,7 +117,22 @@ const obj = {
 }
 let arr = Object.entries(obj)
 console.log(arr)
+/*
+    [
+    [ 'name', 'willone' ],
+    [ 'hobby', [ 'game', 'movie', 'photo' ] ],
+    [ 'city', [ 'KM', 'XA', 'PP' ] ]
+    ]
+*/
+
 
 let tranObj = Object.fromEntries(arr)
 console.log(tranObj)
+/*
+    {
+    name: 'willone',
+    hobby: [ 'game', 'movie', 'photo' ],
+    city: [ 'KM', 'XA', 'PP' ]
+    }
+*/
 ```

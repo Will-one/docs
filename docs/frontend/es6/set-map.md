@@ -15,17 +15,17 @@ ES6提供了新的数据结构set（集合）,它的类型是object
 ```js
 //特点：自动去重
 let s = new Set(['1','2','3','3'])
-console.log(s)
+console.log(s) // Set(3) { '1', '2', '3' }
 //size,元素个数
-console.log(s.size)
+console.log(s.size) // 3
 //add，添加元素
 s.add('4')
-console.log(s)
+console.log(s) // Set(4) { '1', '2', '3', '4' }
 //delete，删除元素
 s.delete('1')
-console.log(s)
+console.log(s) // Set(3) { '2', '3', '4' }
 //has，检测数组中有没有某元素
-console.log(`数组中有4吗：${s.has('4')}`)
+console.log(`数组中有4吗：${s.has('4')}`) // 数组中有4吗：true
 //clear，清空数组
 // s.clear()
 // console.log(s)
@@ -34,24 +34,30 @@ console.log(`数组中有4吗：${s.has('4')}`)
 for(let v of s){
     console.log(v)
 }
+/*
+2
+3
+4
+*/
 ```
 
 ## P31 set实践
 ```js
 let arr = [1,2,3,4,5,4,3,2,1]
+
 //1.数组去重
 let res = [...new Set(arr)];
-console.log(res)
+console.log(res) // [1,2,3,4,5]
 //2.交集
 let arr2 = [4,5,6,4,5,6]
 let res2 = [...new Set(arr)].filter(item => new Set(arr2).has(item))
-console.log(res2)
+console.log(res2) // [4,5]
 //3.并集
 let uni = [...new Set([...arr, ...arr2])]
-console.log(uni)
+console.log(uni) // [1,2,3,4,5,6]
 //4.差集（交集取反）
 let diff = [...new Set(arr)].filter(item => !(new Set(arr2).has(item)))
-console.log(diff)
+console.log(diff) // [1,2,3]
 ```
 
 ## P32 Map 介绍和API

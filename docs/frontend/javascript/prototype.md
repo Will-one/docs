@@ -212,10 +212,10 @@ f.b()
 <code>
 // 作为对象调用的时候，都是通过__proto__查找
 // 输出1：
-F.a() // a()
-F.b() // b()
-f.a() // a()
-f.b() // is not a function
+F.a() // 输出：a()。 F.__proto__ 相当于 Function.prototype ===》 Function.prototype.__proto__（指向原型链终点）相当于 Object.prototype
+F.b() // 输出：b()。 F.__proto__ 相当于 Function.prototype
+f.a() // 输出：a()。 f.__proto__ 相当于 F.prototype (空Object对象) ===》 F.prototype.__proto__ (指向原型链终点) 相当于 Object.prototype
+f.b() // is not a function。如上，找不到b方法
 </code>
 </pre>
 </details>

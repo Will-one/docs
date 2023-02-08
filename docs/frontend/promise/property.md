@@ -75,7 +75,7 @@ Promise.resolve
 
 参数：
 * 如果传入的参数为 非Promise类型 ，则返回的结果为状态为成功的promise对象
-* 如果传入的参数为 Promise类型，则参数执行的结构决定了 resolve的结果
+* 如果传入的参数为 Promise类型，则参数执行的结果决定了 resolve的结果
 :::
 ```js
 let p1 = Promise.resolve('非Promise类型')

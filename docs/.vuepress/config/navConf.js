@@ -41,6 +41,7 @@ module.exports = [
           { text: "SQL", link: "/backend/sql/" },
           { text: "MongoDB", link: "/backend/mongodb/" },
           { text: "Redis", link: "/backend/redis/" },
+          { text: "JAVA", link: "/backend/java/" }
         ]
       },
       {

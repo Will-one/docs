@@ -12,7 +12,7 @@ tags:
 * 用来传输和储存数据
 
 ### JSON
-[JS 笔记 JSON 章节](/frontend/javascript/)
+[JS 笔记 JSON 章节](../javascript/)
 
 ### AJAX 优缺点
 优点
@@ -67,7 +67,7 @@ HTTP（hypertext transport protocol）协议【超文本传输协议】，协议
 行： HTTP/1.1 200 OK
 头:  Content-Type: text/html;charset=uft-8
      Content-Type: 2048
-     COntent-encoding: gzip
+     Content-encoding: gzip
 
 空行:
 体: <html>
@@ -85,8 +85,11 @@ get post put delete
 用来定义对于资源采取什么样的操作，有各自的语义
 
 GET 获取数据：获取资源（文件）
+
 POST 创建数据：注册
+
 PUT 更新数据：修改个人信息，修改密码
+
 DELETE 删除数据：删除一条评论
 
 ### RESTful 接口设计
