@@ -60,6 +60,7 @@ ctx.fillRect(300,200,100,200);
 ```
 
 ## canvas绘制圆
+```
 * arc(x,y,radius,starAngle,endAngle,anticlockwise)
   * x , y : 圆心的 x , y 坐标
   * radius : 半径
@@ -67,6 +68,8 @@ ctx.fillRect(300,200,100,200);
   * endAngle : 结束角度
   * anticlockwise : 是否为（true）为逆时针，（false）为顺时针
 * 开始绘制前先调用beginPath()方法
+```
+
 ```js
 ctx.beginPath()
 ctx.arc(100, 100, 50, 0, 2*Math.PI, true);

@@ -201,12 +201,17 @@ git merge 分支名
 ## 分支存储
 有时，当你在项目的一部分上已经工作一段时间后，所有东西都进入了混乱的状态。而此时需要切换到另一个分支工作。但是，不想将当前这些代码创建一次提交。这个时候可以用git stash
 * git stash
+
   git stash 命令会将未完成的修改保存到一个栈上，可以在任何时候重新应用这些改动（git stash apply）
 
 git stash list 查看存储
+
 git stash apply stash@{2}
+
     如果不指定一个存储，git认为指定的是最近的存储
+
 git stash pop 应用存储然后立即从栈上扔掉它【用的多】
+
 git stash drop stash@{0}加上要溢出的存储的名字来溢出它
 
 
@@ -230,8 +235,11 @@ git stash drop stash@{0}加上要溢出的存储的名字来溢出它
   3. git reset --soft commitID
 
 选项说明
+
 --hard 删除改动代码，撤销git add
+
 --soft 不删除改动的代码，不撤销git add
+
 --mixed 不删除改动代码，撤销git add
 
 

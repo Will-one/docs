@@ -132,6 +132,14 @@ module.exports = {
       children: ["", "canvas", "svg"],
     },
   ],
+  "/frontend/webpack/": [
+    {
+      title: "webpack",
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [""],
+    },
+  ],
   // #endregion
 
   // 后端
@@ -147,7 +155,8 @@ module.exports = {
         "path-module", 
         "http-module", 
         "modularization",
-        "npm&package"
+        "npm&package",
+        "recommend-package"
       ],
     }
   ],

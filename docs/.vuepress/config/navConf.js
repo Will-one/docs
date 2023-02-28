@@ -15,11 +15,12 @@ module.exports = [
         ],
       },
       {
-        text: "必备",
+        text: "扩展",
         items: [
           { text: "ES6", link: "/frontend/es6/" },
           { text: "Promise", link: "/frontend/promise/" },
           { text: "axios", link: "/frontend/axios/" },
+          { text: "webpack",link: "/frontend/webpack/"},
           { text: "可视化", link: "/frontend/visualization/" },
         ],
       },
