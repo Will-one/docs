@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>原型与原型链 | Willone</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/vuepressBlog/favicon.ico">
+    <link rel="manifest" href="/vuepressBlog/manifest.json">
+    <link rel="apple-touch-icon" href="/vuepressBlog/icons/icon-152x152.png">
+    <meta name="description" content="玩命加载中">
+    <meta name="author" content="Willone">
+    <meta name="keywords" content="vuepress,博客,前端">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/vuepressBlog/assets/css/0.styles.b99d4d61.css" as="style"><link rel="preload" href="/vuepressBlog/assets/js/app.0fce48cc.js" as="script"><link rel="preload" href="/vuepressBlog/assets/js/3.c85b88d9.js" as="script"><link rel="preload" href="/vuepressBlog/assets/js/1.5c331416.js" as="script"><link rel="preload" href="/vuepressBlog/assets/js/86.75f5d2cf.js" as="script"><link rel="preload" href="/vuepressBlog/assets/js/8.8b440d50.js" as="script"><link rel="prefetch" href="/vuepressBlog/assets/js/10.c41a07eb.js"><link rel="prefetch" href="/vuepressBlog/assets/js/100.a021185c.js"><link rel="prefetch" href="/vuepressBlog/assets/js/101.e69dd962.js"><link rel="prefetch" href="/vuepressBlog/assets/js/102.55fa812c.js"><link rel="prefetch" href="/vuepressBlog/assets/js/103.6c39a507.js"><link rel="prefetch" href="/vuepressBlog/assets/js/104.f6661b34.js"><link rel="prefetch" href="/vuepressBlog/assets/js/105.4d7fad97.js"><link rel="prefetch" href="/vuepressBlog/assets/js/106.0403fb03.js"><link rel="prefetch" href="/vuepressBlog/assets/js/107.c39d8f72.js"><link rel="prefetch" href="/vuepressBlog/assets/js/108.5934f2f2.js"><link rel="prefetch" href="/vuepressBlog/assets/js/11.d9ba1329.js"><link rel="prefetch" href="/vuepressBlog/assets/js/12.55d45b1a.js"><link rel="prefetch" href="/vuepressBlog/assets/js/13.3c4bbf99.js"><link rel="prefetch" href="/vuepressBlog/assets/js/14.d1c3be22.js"><link rel="prefetch" href="/vuepressBlog/assets/js/15.683b163d.js"><link rel="prefetch" href="/vuepressBlog/assets/js/16.500912db.js"><link rel="prefetch" href="/vuepressBlog/assets/js/17.f52a80da.js"><link rel="prefetch" href="/vuepressBlog/assets/js/18.0fd81ce8.js"><link rel="prefetch" href="/vuepressBlog/assets/js/19.44c8c132.js"><link rel="prefetch" href="/vuepressBlog/assets/js/20.25e74b3e.js"><link rel="prefetch" href="/vuepressBlog/assets/js/21.2d836d13.js"><link rel="prefetch" href="/vuepressBlog/assets/js/22.f822b205.js"><link rel="prefetch" href="/vuepressBlog/assets/js/23.2818cf87.js"><link rel="prefetch" href="/vuepressBlog/assets/js/24.11205242.js"><link rel="prefetch" href="/vuepressBlog/assets/js/25.e20760a5.js"><link rel="prefetch" href="/vuepressBlog/assets/js/26.aedc185f.js"><link rel="prefetch" href="/vuepressBlog/assets/js/27.75dfac8b.js"><link rel="prefetch" href="/vuepressBlog/assets/js/28.fe2562b7.js"><link rel="prefetch" href="/vuepressBlog/assets/js/29.dd865556.js"><link rel="prefetch" href="/vuepressBlog/assets/js/30.42dabd52.js"><link rel="prefetch" href="/vuepressBlog/assets/js/31.1a5aed19.js"><link rel="prefetch" href="/vuepressBlog/assets/js/32.1d20ff1b.js"><link rel="prefetch" href="/vuepressBlog/assets/js/33.f3273ef9.js"><link rel="prefetch" href="/vuepressBlog/assets/js/34.c3576ab8.js"><link rel="prefetch" href="/vuepressBlog/assets/js/35.a3fb1f08.js"><link rel="prefetch" href="/vuepressBlog/assets/js/36.f3d1f911.js"><link rel="prefetch" href="/vuepressBlog/assets/js/37.aa693af0.js"><link rel="prefetch" href="/vuepressBlog/assets/js/38.779fc205.js"><link rel="prefetch" href="/vuepressBlog/assets/js/39.c4805bb8.js"><link rel="prefetch" href="/vuepressBlog/assets/js/4.14352761.js"><link rel="prefetch" href="/vuepressBlog/assets/js/40.73826e5a.js"><link rel="prefetch" href="/vuepressBlog/assets/js/41.31c95d2b.js"><link rel="prefetch" href="/vuepressBlog/assets/js/42.f44f33ca.js"><link rel="prefetch" href="/vuepressBlog/assets/js/43.6cd1d159.js"><link rel="prefetch" href="/vuepressBlog/assets/js/44.e5ed7a78.js"><link rel="prefetch" href="/vuepressBlog/assets/js/45.e03c558b.js"><link rel="prefetch" href="/vuepressBlog/assets/js/46.becd53ea.js"><link rel="prefetch" href="/vuepressBlog/assets/js/47.5309a6cd.js"><link rel="prefetch" href="/vuepressBlog/assets/js/48.cb19a2b6.js"><link rel="prefetch" href="/vuepressBlog/assets/js/49.e18695ee.js"><link rel="prefetch" href="/vuepressBlog/assets/js/5.340bae85.js"><link rel="prefetch" href="/vuepressBlog/assets/js/50.99738501.js"><link rel="prefetch" href="/vuepressBlog/assets/js/51.d2880772.js"><link rel="prefetch" href="/vuepressBlog/assets/js/52.f6a03731.js"><link rel="prefetch" href="/vuepressBlog/assets/js/53.91b93d7c.js"><link rel="prefetch" href="/vuepressBlog/assets/js/54.3aeb1725.js"><link rel="prefetch" href="/vuepressBlog/assets/js/55.96d20c71.js"><link rel="prefetch" href="/vuepressBlog/assets/js/56.9f669dc6.js"><link rel="prefetch" href="/vuepressBlog/assets/js/57.c56b2001.js"><link rel="prefetch" href="/vuepressBlog/assets/js/58.337115ab.js"><link rel="prefetch" href="/vuepressBlog/assets/js/59.6e749ef4.js"><link rel="prefetch" href="/vuepressBlog/assets/js/6.d9b6f99c.js"><link rel="prefetch" href="/vuepressBlog/assets/js/60.18f0644e.js"><link rel="prefetch" href="/vuepressBlog/assets/js/61.be50039c.js"><link rel="prefetch" href="/vuepressBlog/assets/js/62.7197bb10.js"><link rel="prefetch" href="/vuepressBlog/assets/js/63.cdcff254.js"><link rel="prefetch" href="/vuepressBlog/assets/js/64.d032f965.js"><link rel="prefetch" href="/vuepressBlog/assets/js/65.e05f3893.js"><link rel="prefetch" href="/vuepressBlog/assets/js/66.70e16525.js"><link rel="prefetch" href="/vuepressBlog/assets/js/67.db697d24.js"><link rel="prefetch" href="/vuepressBlog/assets/js/68.dd1ee7cc.js"><link rel="prefetch" href="/vuepressBlog/assets/js/69.72b19523.js"><link rel="prefetch" href="/vuepressBlog/assets/js/7.1a6f4890.js"><link rel="prefetch" href="/vuepressBlog/assets/js/70.26313b75.js"><link rel="prefetch" href="/vuepressBlog/assets/js/71.ac744c6d.js"><link rel="prefetch" href="/vuepressBlog/assets/js/72.3d2da698.js"><link rel="prefetch" href="/vuepressBlog/assets/js/73.88be1cf4.js"><link rel="prefetch" href="/vuepressBlog/assets/js/74.9bab27f0.js"><link rel="prefetch" href="/vuepressBlog/assets/js/75.0b95fcad.js"><link rel="prefetch" href="/vuepressBlog/assets/js/76.9188b0a0.js"><link rel="prefetch" href="/vuepressBlog/assets/js/77.122f3d89.js"><link rel="prefetch" href="/vuepressBlog/assets/js/78.b5eb589c.js"><link rel="prefetch" href="/vuepressBlog/assets/js/79.3504d333.js"><link rel="prefetch" href="/vuepressBlog/assets/js/80.6dfcb660.js"><link rel="prefetch" href="/vuepressBlog/assets/js/81.028c9a0b.js"><link rel="prefetch" href="/vuepressBlog/assets/js/82.6ee458ad.js"><link rel="prefetch" href="/vuepressBlog/assets/js/83.79c7bc1f.js"><link rel="prefetch" href="/vuepressBlog/assets/js/84.4272dd8c.js"><link rel="prefetch" href="/vuepressBlog/assets/js/85.34d5ca73.js"><link rel="prefetch" href="/vuepressBlog/assets/js/87.2e25fd6d.js"><link rel="prefetch" href="/vuepressBlog/assets/js/88.8ed8135f.js"><link rel="prefetch" href="/vuepressBlog/assets/js/89.7e413d08.js"><link rel="prefetch" href="/vuepressBlog/assets/js/9.834791c6.js"><link rel="prefetch" href="/vuepressBlog/assets/js/90.ac777f86.js"><link rel="prefetch" href="/vuepressBlog/assets/js/91.c02348e4.js"><link rel="prefetch" href="/vuepressBlog/assets/js/92.37a47413.js"><link rel="prefetch" href="/vuepressBlog/assets/js/93.25c96552.js"><link rel="prefetch" href="/vuepressBlog/assets/js/94.3289e03d.js"><link rel="prefetch" href="/vuepressBlog/assets/js/95.cc4cdfc8.js"><link rel="prefetch" href="/vuepressBlog/assets/js/96.c260fa12.js"><link rel="prefetch" href="/vuepressBlog/assets/js/97.aa73c739.js"><link rel="prefetch" href="/vuepressBlog/assets/js/98.fa228c98.js"><link rel="prefetch" href="/vuepressBlog/assets/js/99.9338bf29.js">
+    <link rel="stylesheet" href="/vuepressBlog/assets/css/0.styles.b99d4d61.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-4e82dffc data-v-1156296a data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>Willone</h3> <p class="description" data-v-4e82dffc data-v-4e82dffc>玩命加载中</p> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><!---->
+            
+          <!---->
+          2023
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepressBlog/" class="home-link router-link-active"><img src="/vuepressBlog/assets/img/logo.png" alt="Willone" class="logo"> <span class="site-name">Willone</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vuepressBlog/" class="nav-link"><i class="fas fa-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="fab fa-css3"></i>
+      前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>基础</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/html/" class="nav-link"><i class="undefined"></i>
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/css/" class="nav-link"><i class="undefined"></i>
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/javascript/" class="nav-link router-link-active"><i class="undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/ajax/" class="nav-link"><i class="undefined"></i>
+  AJAX
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/jquery/" class="nav-link"><i class="undefined"></i>
+  jQuery
+</a></li></ul></li><li class="dropdown-item"><h4>扩展</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/es6/" class="nav-link"><i class="undefined"></i>
+  ES6
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/promise/" class="nav-link"><i class="undefined"></i>
+  Promise
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/axios/" class="nav-link"><i class="undefined"></i>
+  axios
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/webpack/" class="nav-link"><i class="undefined"></i>
+  webpack
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/visualization/" class="nav-link"><i class="undefined"></i>
+  可视化
+</a></li></ul></li><li class="dropdown-item"><h4>框架</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/Vue/" class="nav-link"><i class="undefined"></i>
+  Vue
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="fas fa-server"></i>
+      后端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>技术栈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vuepressBlog/backend/nodejs/" class="nav-link"><i class="undefined"></i>
+  Nodejs
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/backend/nginx/" class="nav-link"><i class="undefined"></i>
+  Nginx
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/backend/sql/" class="nav-link"><i class="undefined"></i>
+  SQL
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/backend/mongodb/" class="nav-link"><i class="undefined"></i>
+  MongoDB
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/backend/redis/" class="nav-link"><i class="undefined"></i>
+  Redis
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/backend/java/" class="nav-link"><i class="undefined"></i>
+  JAVA
+</a></li></ul></li><li class="dropdown-item"><h4>框架</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vuepressBlog/backend/express/" class="nav-link"><i class="undefined"></i>
+  Express
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="fas fa-laptop-code"></i>
+      命令行
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/command/git/" class="nav-link"><i class="undefined"></i>
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/command/linux/" class="nav-link"><i class="undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/command/dos/" class="nav-link"><i class="undefined"></i>
+  DOS
+</a></li></ul></div></div><div class="nav-item"><a href="/vuepressBlog/algorithms/" class="nav-link"><i class="fas fa-percentage"></i>
+  算法
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="fas fa-wrench"></i>
+      开发工具
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/tools/vscode/" class="nav-link"><i class="undefined"></i>
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/tools/xcode/" class="nav-link"><i class="undefined"></i>
+  Xcode
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/tools/postman/" class="nav-link"><i class="undefined"></i>
+  Postman
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="fas fa-project-diagram"></i>
+      项目
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/frontend/javascript/.html" class="nav-link"><i class="undefined"></i>
+  项目1
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/frontend/javascript/.html" class="nav-link"><i class="undefined"></i>
+  项目2
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="fab fa-internet-explorer"></i>
+      实用网站
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://caniuse.com/?search=flex" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  兼容性查询
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://httpbin.org/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  API请求测试
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  MDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://echarts.apache.org/en/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  ECharts
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://fontawesome.com/v5.15/icons?d=gallery&amp;p=2&amp;m=free" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Font Awesome
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://www.lodashjs.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Lodash
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://monkeytype.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  MonkeyTyoe
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="/vuepressBlog/about/" class="nav-link"><i class="fas fa-book"></i>
+  关于
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-828910c6 data-v-1156296a><img src="/vuepressBlog/icons/icon-152x152.png" alt="author-avatar" class="personal-img" data-v-828910c6> <!----> <div class="num" data-v-828910c6><div data-v-828910c6><h3 data-v-828910c6>93</h3> <h6 data-v-828910c6>Articles</h6></div> <div data-v-828910c6><h3 data-v-828910c6>29</h3> <h6 data-v-828910c6>Tags</h6></div></div> <ul class="social-links" data-v-828910c6></ul> <hr data-v-828910c6></div> <nav class="nav-links"><div class="nav-item"><a href="/vuepressBlog/" class="nav-link"><i class="fas fa-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="fab fa-css3"></i>
+      前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>基础</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/html/" class="nav-link"><i class="undefined"></i>
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/css/" class="nav-link"><i class="undefined"></i>
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/javascript/" class="nav-link router-link-active"><i class="undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/ajax/" class="nav-link"><i class="undefined"></i>
+  AJAX
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/jquery/" class="nav-link"><i class="undefined"></i>
+  jQuery
+</a></li></ul></li><li class="dropdown-item"><h4>扩展</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/es6/" class="nav-link"><i class="undefined"></i>
+  ES6
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/promise/" class="nav-link"><i class="undefined"></i>
+  Promise
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/axios/" class="nav-link"><i class="undefined"></i>
+  axios
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/webpack/" class="nav-link"><i class="undefined"></i>
+  webpack
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/visualization/" class="nav-link"><i class="undefined"></i>
+  可视化
+</a></li></ul></li><li class="dropdown-item"><h4>框架</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/Vue/" class="nav-link"><i class="undefined"></i>
+  Vue
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="fas fa-server"></i>
+      后端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>技术栈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vuepressBlog/backend/nodejs/" class="nav-link"><i class="undefined"></i>
+  Nodejs
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/backend/nginx/" class="nav-link"><i class="undefined"></i>
+  Nginx
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/backend/sql/" class="nav-link"><i class="undefined"></i>
+  SQL
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/backend/mongodb/" class="nav-link"><i class="undefined"></i>
+  MongoDB
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/backend/redis/" class="nav-link"><i class="undefined"></i>
+  Redis
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/backend/java/" class="nav-link"><i class="undefined"></i>
+  JAVA
+</a></li></ul></li><li class="dropdown-item"><h4>框架</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vuepressBlog/backend/express/" class="nav-link"><i class="undefined"></i>
+  Express
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="fas fa-laptop-code"></i>
+      命令行
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/command/git/" class="nav-link"><i class="undefined"></i>
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/command/linux/" class="nav-link"><i class="undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/command/dos/" class="nav-link"><i class="undefined"></i>
+  DOS
+</a></li></ul></div></div><div class="nav-item"><a href="/vuepressBlog/algorithms/" class="nav-link"><i class="fas fa-percentage"></i>
+  算法
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="fas fa-wrench"></i>
+      开发工具
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/tools/vscode/" class="nav-link"><i class="undefined"></i>
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/tools/xcode/" class="nav-link"><i class="undefined"></i>
+  Xcode
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/tools/postman/" class="nav-link"><i class="undefined"></i>
+  Postman
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="fas fa-project-diagram"></i>
+      项目
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/frontend/javascript/.html" class="nav-link"><i class="undefined"></i>
+  项目1
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/frontend/javascript/.html" class="nav-link"><i class="undefined"></i>
+  项目2
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="fab fa-internet-explorer"></i>
+      实用网站
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://caniuse.com/?search=flex" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  兼容性查询
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://httpbin.org/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  API请求测试
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  MDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://echarts.apache.org/en/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  ECharts
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://fontawesome.com/v5.15/icons?d=gallery&amp;p=2&amp;m=free" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Font Awesome
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://www.lodashjs.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Lodash
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://monkeytype.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  MonkeyTyoe
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="/vuepressBlog/about/" class="nav-link"><i class="fas fa-book"></i>
+  关于
+</a></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>JavaScript</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vuepressBlog/frontend/javascript/" aria-current="page" class="sidebar-link">前言</a></li><li><a href="/vuepressBlog/frontend/javascript/typeConversion.html" class="sidebar-link">类型转换</a></li><li><a href="/vuepressBlog/frontend/javascript/prototype.html" aria-current="page" class="active sidebar-link">原型与原型链</a></li><li><a href="/vuepressBlog/frontend/javascript/objectAndFunction.html" class="sidebar-link">对象和函数</a></li><li><a href="/vuepressBlog/frontend/javascript/executionContexts.html" class="sidebar-link">执行上下文</a></li><li><a href="/vuepressBlog/frontend/javascript/scope.html" class="sidebar-link">作用域</a></li><li><a href="/vuepressBlog/frontend/javascript/closure.html" class="sidebar-link">闭包</a></li><li><a href="/vuepressBlog/frontend/javascript/objectInherit.html" class="sidebar-link">对象创建与继承模式</a></li><li><a href="/vuepressBlog/frontend/javascript/threadEvent.html" class="sidebar-link">线程与事件机制</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-4e82dffc data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>原型与原型链</h3> <!----> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><!---->
+            
+          <!---->
+          2023
+        </a></span></div></div> <div data-v-1156296a><main class="page"><section><div class="page-title"><h1 class="title">原型与原型链</h1> <div data-v-1ff7123e><!----> <!----> <!----> <i class="tags iconfont reco-tag" data-v-1ff7123e><span class="tag-item" data-v-1ff7123e>javascript</span><span class="tag-item" data-v-1ff7123e>prototype</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="p15-函数的-prototype"><a href="#p15-函数的-prototype" class="header-anchor">#</a> P15 函数的 prototype</h2> <div class="custom-block tip"><p class="title"></p><p>函数的prototype属性</p></div><ul><li>每个函数都有一个prototype属性，它默认指向一个Object空对象（即称为：原型对象）</li> <li>原型对象中有一个属性constructor，他指向函数对象</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">Fun</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token class-name">Fun</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span> <span class="token comment">// 默认指向一个空对象，可以向其添加属性</span>
+<span class="token class-name">Fun</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">test</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;向原型对象添加的方法&quot;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token class-name">Fun</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Fun<span class="token punctuation">)</span> <span class="token comment">// true,原型对象中的constructor指向函数对象</span>
+</code></pre></div><div class="custom-block tip"><p class="title"></p><p>给原型函数添加属性（一般是方法）</p></div><ul><li>作用：函数所有的实例对象自动拥有原型中的属性（方法）</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">Fun2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token class-name">Fun2</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">test2</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;原型中的方法&quot;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> fun2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Fun2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+fun2<span class="token punctuation">.</span><span class="token function">test2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 可以调用到原型中的方法</span>
+</code></pre></div><hr> <h2 id="p16-显式原型和隐式原型"><a href="#p16-显式原型和隐式原型" class="header-anchor">#</a> P16 显式原型和隐式原型</h2> <ul><li>每个函数都有一个prototype，称为显式原型</li> <li>每个实例对象都有__proto__，称为隐式原型</li> <li>“实例对象”的__proto__的值为其对应“构造函数”的prototype的值</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">Fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment">// 内部语句：this.prototype = {}</span>
+<span class="token keyword">var</span> fn <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 内部语句：this.__proto__ = Fn.prototype</span>
+
+<span class="token comment">/* “实例对象”的__proto__的值为其对应“构造函数”的prototype的值 */</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token class-name">Fn</span><span class="token punctuation">.</span>prototype <span class="token operator">===</span> fn<span class="token punctuation">.</span>__proto__<span class="token punctuation">)</span><span class="token comment">//true</span>
+</code></pre></div><div class="custom-block tip"><p class="title">总结</p><ul><li>函数prototype属性，在定义函数时自动添加，默认值是一个空Object对象</li> <li>对象__proto__属性，创建对象是自动添加的，默认值是构造函数的prototype属性值</li> <li>程序员能直接操作显示原型，但不能直接操作隐式原型（ES6之前）</li></ul></div><h2 id="p17-18-原型链"><a href="#p17-18-原型链" class="header-anchor">#</a> P17-18 原型链</h2> <h3 id="原型链关系-看图"><a href="#原型链关系-看图" class="header-anchor">#</a> 原型链关系（看图）：</h3> <p>访问一个对象的属性时</p> <ul><li>a.先在自身属性中查找，找到返回</li> <li>b.如果自身没有，再沿着__proto__这条链向上查找，找到返回</li> <li>c.如果最终都没有找到，返回undefined</li></ul> <div class="custom-block tip"><p class="title"></p><p>别名：隐式原型链</p> <p>作用：查找对象的属性（方法）</p></div><img src="/vuepressBlog/assets/frontend/prototypeChain_1.png" alt="proto1" class="zoom-img"> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">Fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function-variable function">test1</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'test1()'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Fn</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">test2</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'test2()'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> fn <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">/* 实例对象的隐式原型 和 其构造函数的显式原型指 */</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token class-name">Fn</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>fn<span class="token punctuation">.</span>__proto__<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token class-name">Fn</span><span class="token punctuation">.</span>prototype <span class="token operator">===</span> fn<span class="token punctuation">.</span>__proto__<span class="token punctuation">)</span> <span class="token comment">// true</span>
+
+fn<span class="token punctuation">.</span><span class="token function">test1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// test1</span>
+fn<span class="token punctuation">.</span><span class="token function">test2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// test2</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>fn<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">//fn.test3() // is not a function</span>
+</code></pre></div><hr> <h3 id="构造函数-原型-实例对象的关系"><a href="#构造函数-原型-实例对象的关系" class="header-anchor">#</a> 构造函数/原型/实例对象的关系：</h3> <img src="/vuepressBlog/assets/frontend/prototypeChain_2.png" alt="proto2" class="zoom-img"> <hr> <h3 id="构造函数-原型-实例对象的关系2"><a href="#构造函数-原型-实例对象的关系2" class="header-anchor">#</a> 构造函数/原型/实例对象的关系2：</h3> <img src="/vuepressBlog/assets/frontend/prototypeChain_3.png" alt="proto3" class="zoom-img"> <ol><li>函数的prototype指向的对象默认是“空Object实例对象”（但Object不满足）</li></ol> <div class="language-js extra-class"><pre class="language-js"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token class-name">Fn</span><span class="token punctuation">.</span>prototype <span class="token keyword">instanceof</span> <span class="token class-name">Object</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token class-name">Object</span><span class="token punctuation">.</span>prototype <span class="token keyword">instanceof</span> <span class="token class-name">Object</span><span class="token punctuation">)</span> <span class="token comment">// false</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token class-name">Function</span><span class="token punctuation">.</span>prototype <span class="token keyword">instanceof</span> <span class="token class-name">Object</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+</code></pre></div><ol start="2"><li>所有函数都是Function的实例(包含Function)</li></ol> <div class="language-js extra-class"><pre class="language-js"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Function<span class="token punctuation">.</span>__proto__<span class="token operator">===</span><span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span> <span class="token comment">// true</span>
+
+</code></pre></div><ol start="3"><li>Object的属性prototype指向的原型实例是原型链的尽头（__proto__为null）</li></ol> <div class="language-js extra-class"><pre class="language-js"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>__proto__<span class="token punctuation">)</span> <span class="token comment">// null</span>
+</code></pre></div><hr> <h2 id="p19-原型链属性问题"><a href="#p19-原型链属性问题" class="header-anchor">#</a> P19 原型链属性问题</h2> <ul><li>读取对象的属性时，自动在原型链中找</li> <li>设置对象的属性值时，不会查找原型链。本身没有，直接就在自己里面添加</li> <li>方法一般定义在原型中，属性一般通过构造函数定义在对象本身</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">Fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token class-name">Fn</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>a <span class="token operator">=</span> <span class="token string">'xxx'</span>
+
+<span class="token keyword">var</span> fn1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>fn1<span class="token punctuation">.</span>a<span class="token punctuation">,</span>fn1<span class="token punctuation">)</span> <span class="token comment">// 找到原型</span>
+
+<span class="token keyword">var</span> fn2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+fn2<span class="token punctuation">.</span>a <span class="token operator">=</span> <span class="token string">&quot;yyy&quot;</span> <span class="token comment">// 在自己里面创建，不会修改原型的属性</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>fn1<span class="token punctuation">.</span>a<span class="token punctuation">,</span>fn2<span class="token punctuation">.</span>a<span class="token punctuation">,</span>fn2<span class="token punctuation">)</span> <span class="token comment">// xxx,yyy</span>
+</code></pre></div><hr> <h2 id="p20-学习instanceof"><a href="#p20-学习instanceof" class="header-anchor">#</a> P20 学习instanceof</h2> <div class="custom-block tip"><p class="title"></p><ol><li>instanceof 是如何判断的？</li></ol></div><ul><li>表达式 A instanceof B</li> <li>(A走隐式原型链，B走显式原型链，看有没有交叉)</li> <li>如果B函数的显式原型对象在A对象的隐式原型链上，返回 true。否则返回 false</li></ul> <div class="custom-block tip"><p class="title"></p><ol start="2"><li>Function 是通过 new 自己产生的实例</li></ol></div><div class="language-js extra-class"><pre class="language-js"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Object <span class="token keyword">instanceof</span> <span class="token class-name">Function</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Object <span class="token keyword">instanceof</span> <span class="token class-name">Object</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Function <span class="token keyword">instanceof</span> <span class="token class-name">Function</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Function <span class="token keyword">instanceof</span> <span class="token class-name">Object</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+
+<span class="token keyword">function</span> <span class="token function">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token comment">// 隐式：Object -&gt; Function.prototype -&gt; Object原型对象（原型链终点）</span>
+<span class="token comment">// 显式：Foo -&gt; Object空对象 </span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Object <span class="token keyword">instanceof</span> <span class="token class-name">Foo</span><span class="token punctuation">)</span> <span class="token comment">// false</span>
+</code></pre></div><h2 id="p21-原型小测试"><a href="#p21-原型小测试" class="header-anchor">#</a> P21 原型小测试</h2> <div class="custom-block tip"><p class="title"></p><p>测试题1：</p></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> <span class="token function-variable function">A</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token class-name">A</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>n <span class="token operator">=</span> <span class="token number">1</span>
+
+<span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">A</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 说明1</span>
+<span class="token class-name">A</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> <span class="token punctuation">{</span> n<span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">,</span> m<span class="token operator">:</span><span class="token number">3</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> c <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">A</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">// 输出1</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>b<span class="token punctuation">.</span>n<span class="token punctuation">,</span> b<span class="token punctuation">.</span>m<span class="token punctuation">,</span> c<span class="token punctuation">.</span>n<span class="token punctuation">,</span> c<span class="token punctuation">.</span>m<span class="token punctuation">)</span>
+</code></pre></div><details><summary>查看解析</summary> <pre><code>
+// 说明1：这一步，A的显式原型指向了一个新的Object对象，而上面b的隐式原型还是指向原来的Object
+A.prototype = { n:2, m:3 }
+...
+// 输出1：
+console.log(b.n, b.m, c.n, c.m) // 1,undefined,2,3
+</code>
+</pre></details> <hr> <div class="custom-block tip"><p class="title"></p><p>测试题2：</p></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> <span class="token function-variable function">F</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">a</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;a()&quot;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">b</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;b()&quot;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> f <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">F</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">// 输出1</span>
+<span class="token constant">F</span><span class="token punctuation">.</span><span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token constant">F</span><span class="token punctuation">.</span><span class="token function">b</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+f<span class="token punctuation">.</span><span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+f<span class="token punctuation">.</span><span class="token function">b</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><details><summary>查看解析</summary> <pre><code>
+// 作为对象调用的时候，都是通过__proto__查找
+// 输出1：
+F.a() // 输出：a()。 F.__proto__ 相当于 Function.prototype ===》 Function.prototype.__proto__（指向原型链终点）相当于 Object.prototype
+F.b() // 输出：b()。 F.__proto__ 相当于 Function.prototype
+f.a() // 输出：a()。 f.__proto__ 相当于 F.prototype (空Object对象) ===》 F.prototype.__proto__ (指向原型链终点) 相当于 Object.prototype
+f.b() // is not a function。如上，找不到b方法
+</code>
+</pre></details></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">Wednesday, February 8, 2023 9:16 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/vuepressBlog/frontend/javascript/typeConversion.html" class="prev">
+            类型转换
+          </a></span> <span class="next"><a href="/vuepressBlog/frontend/javascript/objectAndFunction.html">
+            对象和函数
+          </a></span></p></div> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-70334359><li class="level-2" data-v-70334359><a href="/vuepressBlog/frontend/javascript/prototype.html#p15-函数的-prototype" class="sidebar-link reco-side-p15-函数的-prototype" data-v-70334359>P15 函数的 prototype</a></li><li class="level-2" data-v-70334359><a href="/vuepressBlog/frontend/javascript/prototype.html#p16-显式原型和隐式原型" class="sidebar-link reco-side-p16-显式原型和隐式原型" data-v-70334359>P16 显式原型和隐式原型</a></li><li class="level-2" data-v-70334359><a href="/vuepressBlog/frontend/javascript/prototype.html#p17-18-原型链" class="sidebar-link reco-side-p17-18-原型链" data-v-70334359>P17-18 原型链</a></li><li class="level-3" data-v-70334359><a href="/vuepressBlog/frontend/javascript/prototype.html#原型链关系-看图" class="sidebar-link reco-side-原型链关系-看图" data-v-70334359>原型链关系（看图）：</a></li><li class="level-3" data-v-70334359><a href="/vuepressBlog/frontend/javascript/prototype.html#构造函数-原型-实例对象的关系" class="sidebar-link reco-side-构造函数-原型-实例对象的关系" data-v-70334359>构造函数/原型/实例对象的关系：</a></li><li class="level-3" data-v-70334359><a href="/vuepressBlog/frontend/javascript/prototype.html#构造函数-原型-实例对象的关系2" class="sidebar-link reco-side-构造函数-原型-实例对象的关系2" data-v-70334359>构造函数/原型/实例对象的关系2：</a></li><li class="level-2" data-v-70334359><a href="/vuepressBlog/frontend/javascript/prototype.html#p19-原型链属性问题" class="sidebar-link reco-side-p19-原型链属性问题" data-v-70334359>P19 原型链属性问题</a></li><li class="level-2" data-v-70334359><a href="/vuepressBlog/frontend/javascript/prototype.html#p20-学习instanceof" class="sidebar-link reco-side-p20-学习instanceof" data-v-70334359>P20 学习instanceof</a></li><li class="level-2" data-v-70334359><a href="/vuepressBlog/frontend/javascript/prototype.html#p21-原型小测试" class="sidebar-link reco-side-p21-原型小测试" data-v-70334359>P21 原型小测试</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><!----><!----><!----></div></div>
+    <script src="/vuepressBlog/assets/js/app.0fce48cc.js" defer></script><script src="/vuepressBlog/assets/js/3.c85b88d9.js" defer></script><script src="/vuepressBlog/assets/js/1.5c331416.js" defer></script><script src="/vuepressBlog/assets/js/86.75f5d2cf.js" defer></script><script src="/vuepressBlog/assets/js/8.8b440d50.js" defer></script>
+  </body>
+</html>

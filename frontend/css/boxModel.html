@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>盒模型 | Willone</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/vuepressBlog/favicon.ico">
+    <link rel="manifest" href="/vuepressBlog/manifest.json">
+    <link rel="apple-touch-icon" href="/vuepressBlog/icons/icon-152x152.png">
+    <meta name="description" content="玩命加载中">
+    <meta name="author" content="Willone">
+    <meta name="keywords" content="vuepress,博客,前端">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/vuepressBlog/assets/css/0.styles.b99d4d61.css" as="style"><link rel="preload" href="/vuepressBlog/assets/js/app.0fce48cc.js" as="script"><link rel="preload" href="/vuepressBlog/assets/js/3.c85b88d9.js" as="script"><link rel="preload" href="/vuepressBlog/assets/js/1.5c331416.js" as="script"><link rel="preload" href="/vuepressBlog/assets/js/46.becd53ea.js" as="script"><link rel="preload" href="/vuepressBlog/assets/js/8.8b440d50.js" as="script"><link rel="prefetch" href="/vuepressBlog/assets/js/10.c41a07eb.js"><link rel="prefetch" href="/vuepressBlog/assets/js/100.a021185c.js"><link rel="prefetch" href="/vuepressBlog/assets/js/101.e69dd962.js"><link rel="prefetch" href="/vuepressBlog/assets/js/102.55fa812c.js"><link rel="prefetch" href="/vuepressBlog/assets/js/103.6c39a507.js"><link rel="prefetch" href="/vuepressBlog/assets/js/104.f6661b34.js"><link rel="prefetch" href="/vuepressBlog/assets/js/105.4d7fad97.js"><link rel="prefetch" href="/vuepressBlog/assets/js/106.0403fb03.js"><link rel="prefetch" href="/vuepressBlog/assets/js/107.c39d8f72.js"><link rel="prefetch" href="/vuepressBlog/assets/js/108.5934f2f2.js"><link rel="prefetch" href="/vuepressBlog/assets/js/11.d9ba1329.js"><link rel="prefetch" href="/vuepressBlog/assets/js/12.55d45b1a.js"><link rel="prefetch" href="/vuepressBlog/assets/js/13.3c4bbf99.js"><link rel="prefetch" href="/vuepressBlog/assets/js/14.d1c3be22.js"><link rel="prefetch" href="/vuepressBlog/assets/js/15.683b163d.js"><link rel="prefetch" href="/vuepressBlog/assets/js/16.500912db.js"><link rel="prefetch" href="/vuepressBlog/assets/js/17.f52a80da.js"><link rel="prefetch" href="/vuepressBlog/assets/js/18.0fd81ce8.js"><link rel="prefetch" href="/vuepressBlog/assets/js/19.44c8c132.js"><link rel="prefetch" href="/vuepressBlog/assets/js/20.25e74b3e.js"><link rel="prefetch" href="/vuepressBlog/assets/js/21.2d836d13.js"><link rel="prefetch" href="/vuepressBlog/assets/js/22.f822b205.js"><link rel="prefetch" href="/vuepressBlog/assets/js/23.2818cf87.js"><link rel="prefetch" href="/vuepressBlog/assets/js/24.11205242.js"><link rel="prefetch" href="/vuepressBlog/assets/js/25.e20760a5.js"><link rel="prefetch" href="/vuepressBlog/assets/js/26.aedc185f.js"><link rel="prefetch" href="/vuepressBlog/assets/js/27.75dfac8b.js"><link rel="prefetch" href="/vuepressBlog/assets/js/28.fe2562b7.js"><link rel="prefetch" href="/vuepressBlog/assets/js/29.dd865556.js"><link rel="prefetch" href="/vuepressBlog/assets/js/30.42dabd52.js"><link rel="prefetch" href="/vuepressBlog/assets/js/31.1a5aed19.js"><link rel="prefetch" href="/vuepressBlog/assets/js/32.1d20ff1b.js"><link rel="prefetch" href="/vuepressBlog/assets/js/33.f3273ef9.js"><link rel="prefetch" href="/vuepressBlog/assets/js/34.c3576ab8.js"><link rel="prefetch" href="/vuepressBlog/assets/js/35.a3fb1f08.js"><link rel="prefetch" href="/vuepressBlog/assets/js/36.f3d1f911.js"><link rel="prefetch" href="/vuepressBlog/assets/js/37.aa693af0.js"><link rel="prefetch" href="/vuepressBlog/assets/js/38.779fc205.js"><link rel="prefetch" href="/vuepressBlog/assets/js/39.c4805bb8.js"><link rel="prefetch" href="/vuepressBlog/assets/js/4.14352761.js"><link rel="prefetch" href="/vuepressBlog/assets/js/40.73826e5a.js"><link rel="prefetch" href="/vuepressBlog/assets/js/41.31c95d2b.js"><link rel="prefetch" href="/vuepressBlog/assets/js/42.f44f33ca.js"><link rel="prefetch" href="/vuepressBlog/assets/js/43.6cd1d159.js"><link rel="prefetch" href="/vuepressBlog/assets/js/44.e5ed7a78.js"><link rel="prefetch" href="/vuepressBlog/assets/js/45.e03c558b.js"><link rel="prefetch" href="/vuepressBlog/assets/js/47.5309a6cd.js"><link rel="prefetch" href="/vuepressBlog/assets/js/48.cb19a2b6.js"><link rel="prefetch" href="/vuepressBlog/assets/js/49.e18695ee.js"><link rel="prefetch" href="/vuepressBlog/assets/js/5.340bae85.js"><link rel="prefetch" href="/vuepressBlog/assets/js/50.99738501.js"><link rel="prefetch" href="/vuepressBlog/assets/js/51.d2880772.js"><link rel="prefetch" href="/vuepressBlog/assets/js/52.f6a03731.js"><link rel="prefetch" href="/vuepressBlog/assets/js/53.91b93d7c.js"><link rel="prefetch" href="/vuepressBlog/assets/js/54.3aeb1725.js"><link rel="prefetch" href="/vuepressBlog/assets/js/55.96d20c71.js"><link rel="prefetch" href="/vuepressBlog/assets/js/56.9f669dc6.js"><link rel="prefetch" href="/vuepressBlog/assets/js/57.c56b2001.js"><link rel="prefetch" href="/vuepressBlog/assets/js/58.337115ab.js"><link rel="prefetch" href="/vuepressBlog/assets/js/59.6e749ef4.js"><link rel="prefetch" href="/vuepressBlog/assets/js/6.d9b6f99c.js"><link rel="prefetch" href="/vuepressBlog/assets/js/60.18f0644e.js"><link rel="prefetch" href="/vuepressBlog/assets/js/61.be50039c.js"><link rel="prefetch" href="/vuepressBlog/assets/js/62.7197bb10.js"><link rel="prefetch" href="/vuepressBlog/assets/js/63.cdcff254.js"><link rel="prefetch" href="/vuepressBlog/assets/js/64.d032f965.js"><link rel="prefetch" href="/vuepressBlog/assets/js/65.e05f3893.js"><link rel="prefetch" href="/vuepressBlog/assets/js/66.70e16525.js"><link rel="prefetch" href="/vuepressBlog/assets/js/67.db697d24.js"><link rel="prefetch" href="/vuepressBlog/assets/js/68.dd1ee7cc.js"><link rel="prefetch" href="/vuepressBlog/assets/js/69.72b19523.js"><link rel="prefetch" href="/vuepressBlog/assets/js/7.1a6f4890.js"><link rel="prefetch" href="/vuepressBlog/assets/js/70.26313b75.js"><link rel="prefetch" href="/vuepressBlog/assets/js/71.ac744c6d.js"><link rel="prefetch" href="/vuepressBlog/assets/js/72.3d2da698.js"><link rel="prefetch" href="/vuepressBlog/assets/js/73.88be1cf4.js"><link rel="prefetch" href="/vuepressBlog/assets/js/74.9bab27f0.js"><link rel="prefetch" href="/vuepressBlog/assets/js/75.0b95fcad.js"><link rel="prefetch" href="/vuepressBlog/assets/js/76.9188b0a0.js"><link rel="prefetch" href="/vuepressBlog/assets/js/77.122f3d89.js"><link rel="prefetch" href="/vuepressBlog/assets/js/78.b5eb589c.js"><link rel="prefetch" href="/vuepressBlog/assets/js/79.3504d333.js"><link rel="prefetch" href="/vuepressBlog/assets/js/80.6dfcb660.js"><link rel="prefetch" href="/vuepressBlog/assets/js/81.028c9a0b.js"><link rel="prefetch" href="/vuepressBlog/assets/js/82.6ee458ad.js"><link rel="prefetch" href="/vuepressBlog/assets/js/83.79c7bc1f.js"><link rel="prefetch" href="/vuepressBlog/assets/js/84.4272dd8c.js"><link rel="prefetch" href="/vuepressBlog/assets/js/85.34d5ca73.js"><link rel="prefetch" href="/vuepressBlog/assets/js/86.75f5d2cf.js"><link rel="prefetch" href="/vuepressBlog/assets/js/87.2e25fd6d.js"><link rel="prefetch" href="/vuepressBlog/assets/js/88.8ed8135f.js"><link rel="prefetch" href="/vuepressBlog/assets/js/89.7e413d08.js"><link rel="prefetch" href="/vuepressBlog/assets/js/9.834791c6.js"><link rel="prefetch" href="/vuepressBlog/assets/js/90.ac777f86.js"><link rel="prefetch" href="/vuepressBlog/assets/js/91.c02348e4.js"><link rel="prefetch" href="/vuepressBlog/assets/js/92.37a47413.js"><link rel="prefetch" href="/vuepressBlog/assets/js/93.25c96552.js"><link rel="prefetch" href="/vuepressBlog/assets/js/94.3289e03d.js"><link rel="prefetch" href="/vuepressBlog/assets/js/95.cc4cdfc8.js"><link rel="prefetch" href="/vuepressBlog/assets/js/96.c260fa12.js"><link rel="prefetch" href="/vuepressBlog/assets/js/97.aa73c739.js"><link rel="prefetch" href="/vuepressBlog/assets/js/98.fa228c98.js"><link rel="prefetch" href="/vuepressBlog/assets/js/99.9338bf29.js">
+    <link rel="stylesheet" href="/vuepressBlog/assets/css/0.styles.b99d4d61.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-4e82dffc data-v-1156296a data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>Willone</h3> <p class="description" data-v-4e82dffc data-v-4e82dffc>玩命加载中</p> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><!---->
+            
+          <!---->
+          2023
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepressBlog/" class="home-link router-link-active"><img src="/vuepressBlog/assets/img/logo.png" alt="Willone" class="logo"> <span class="site-name">Willone</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vuepressBlog/" class="nav-link"><i class="fas fa-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="fab fa-css3"></i>
+      前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>基础</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/html/" class="nav-link"><i class="undefined"></i>
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/css/" class="nav-link router-link-active"><i class="undefined"></i>
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/javascript/" class="nav-link"><i class="undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/ajax/" class="nav-link"><i class="undefined"></i>
+  AJAX
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/jquery/" class="nav-link"><i class="undefined"></i>
+  jQuery
+</a></li></ul></li><li class="dropdown-item"><h4>扩展</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/es6/" class="nav-link"><i class="undefined"></i>
+  ES6
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/promise/" class="nav-link"><i class="undefined"></i>
+  Promise
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/axios/" class="nav-link"><i class="undefined"></i>
+  axios
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/webpack/" class="nav-link"><i class="undefined"></i>
+  webpack
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/visualization/" class="nav-link"><i class="undefined"></i>
+  可视化
+</a></li></ul></li><li class="dropdown-item"><h4>框架</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/Vue/" class="nav-link"><i class="undefined"></i>
+  Vue
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="fas fa-server"></i>
+      后端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>技术栈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vuepressBlog/backend/nodejs/" class="nav-link"><i class="undefined"></i>
+  Nodejs
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/backend/nginx/" class="nav-link"><i class="undefined"></i>
+  Nginx
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/backend/sql/" class="nav-link"><i class="undefined"></i>
+  SQL
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/backend/mongodb/" class="nav-link"><i class="undefined"></i>
+  MongoDB
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/backend/redis/" class="nav-link"><i class="undefined"></i>
+  Redis
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/backend/java/" class="nav-link"><i class="undefined"></i>
+  JAVA
+</a></li></ul></li><li class="dropdown-item"><h4>框架</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vuepressBlog/backend/express/" class="nav-link"><i class="undefined"></i>
+  Express
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="fas fa-laptop-code"></i>
+      命令行
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/command/git/" class="nav-link"><i class="undefined"></i>
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/command/linux/" class="nav-link"><i class="undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/command/dos/" class="nav-link"><i class="undefined"></i>
+  DOS
+</a></li></ul></div></div><div class="nav-item"><a href="/vuepressBlog/algorithms/" class="nav-link"><i class="fas fa-percentage"></i>
+  算法
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="fas fa-wrench"></i>
+      开发工具
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/tools/vscode/" class="nav-link"><i class="undefined"></i>
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/tools/xcode/" class="nav-link"><i class="undefined"></i>
+  Xcode
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/tools/postman/" class="nav-link"><i class="undefined"></i>
+  Postman
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="fas fa-project-diagram"></i>
+      项目
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/frontend/css/.html" class="nav-link"><i class="undefined"></i>
+  项目1
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/frontend/css/.html" class="nav-link"><i class="undefined"></i>
+  项目2
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="fab fa-internet-explorer"></i>
+      实用网站
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://caniuse.com/?search=flex" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  兼容性查询
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://httpbin.org/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  API请求测试
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  MDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://echarts.apache.org/en/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  ECharts
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://fontawesome.com/v5.15/icons?d=gallery&amp;p=2&amp;m=free" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Font Awesome
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://www.lodashjs.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Lodash
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://monkeytype.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  MonkeyTyoe
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="/vuepressBlog/about/" class="nav-link"><i class="fas fa-book"></i>
+  关于
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-828910c6 data-v-1156296a><img src="/vuepressBlog/icons/icon-152x152.png" alt="author-avatar" class="personal-img" data-v-828910c6> <!----> <div class="num" data-v-828910c6><div data-v-828910c6><h3 data-v-828910c6>93</h3> <h6 data-v-828910c6>Articles</h6></div> <div data-v-828910c6><h3 data-v-828910c6>29</h3> <h6 data-v-828910c6>Tags</h6></div></div> <ul class="social-links" data-v-828910c6></ul> <hr data-v-828910c6></div> <nav class="nav-links"><div class="nav-item"><a href="/vuepressBlog/" class="nav-link"><i class="fas fa-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="fab fa-css3"></i>
+      前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>基础</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/html/" class="nav-link"><i class="undefined"></i>
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/css/" class="nav-link router-link-active"><i class="undefined"></i>
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/javascript/" class="nav-link"><i class="undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/ajax/" class="nav-link"><i class="undefined"></i>
+  AJAX
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/jquery/" class="nav-link"><i class="undefined"></i>
+  jQuery
+</a></li></ul></li><li class="dropdown-item"><h4>扩展</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/es6/" class="nav-link"><i class="undefined"></i>
+  ES6
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/promise/" class="nav-link"><i class="undefined"></i>
+  Promise
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/axios/" class="nav-link"><i class="undefined"></i>
+  axios
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/webpack/" class="nav-link"><i class="undefined"></i>
+  webpack
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/visualization/" class="nav-link"><i class="undefined"></i>
+  可视化
+</a></li></ul></li><li class="dropdown-item"><h4>框架</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vuepressBlog/frontend/Vue/" class="nav-link"><i class="undefined"></i>
+  Vue
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="fas fa-server"></i>
+      后端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>技术栈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vuepressBlog/backend/nodejs/" class="nav-link"><i class="undefined"></i>
+  Nodejs
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/backend/nginx/" class="nav-link"><i class="undefined"></i>
+  Nginx
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/backend/sql/" class="nav-link"><i class="undefined"></i>
+  SQL
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/backend/mongodb/" class="nav-link"><i class="undefined"></i>
+  MongoDB
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/backend/redis/" class="nav-link"><i class="undefined"></i>
+  Redis
+</a></li><li class="dropdown-subitem"><a href="/vuepressBlog/backend/java/" class="nav-link"><i class="undefined"></i>
+  JAVA
+</a></li></ul></li><li class="dropdown-item"><h4>框架</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vuepressBlog/backend/express/" class="nav-link"><i class="undefined"></i>
+  Express
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="fas fa-laptop-code"></i>
+      命令行
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/command/git/" class="nav-link"><i class="undefined"></i>
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/command/linux/" class="nav-link"><i class="undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/command/dos/" class="nav-link"><i class="undefined"></i>
+  DOS
+</a></li></ul></div></div><div class="nav-item"><a href="/vuepressBlog/algorithms/" class="nav-link"><i class="fas fa-percentage"></i>
+  算法
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="fas fa-wrench"></i>
+      开发工具
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/tools/vscode/" class="nav-link"><i class="undefined"></i>
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/tools/xcode/" class="nav-link"><i class="undefined"></i>
+  Xcode
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/tools/postman/" class="nav-link"><i class="undefined"></i>
+  Postman
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="fas fa-project-diagram"></i>
+      项目
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/frontend/css/.html" class="nav-link"><i class="undefined"></i>
+  项目1
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/frontend/css/.html" class="nav-link"><i class="undefined"></i>
+  项目2
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="fab fa-internet-explorer"></i>
+      实用网站
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://caniuse.com/?search=flex" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  兼容性查询
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://httpbin.org/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  API请求测试
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  MDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://echarts.apache.org/en/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  ECharts
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://fontawesome.com/v5.15/icons?d=gallery&amp;p=2&amp;m=free" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Font Awesome
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://www.lodashjs.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Lodash
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://monkeytype.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  MonkeyTyoe
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="/vuepressBlog/about/" class="nav-link"><i class="fas fa-book"></i>
+  关于
+</a></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>CSS</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vuepressBlog/frontend/css/" aria-current="page" class="sidebar-link">前言</a></li><li><a href="/vuepressBlog/frontend/css/selector.html" class="sidebar-link">常用选择器</a></li><li><a href="/vuepressBlog/frontend/css/units.html" class="sidebar-link">单位和文档流</a></li><li><a href="/vuepressBlog/frontend/css/boxModel.html" aria-current="page" class="active sidebar-link">盒模型</a></li><li><a href="/vuepressBlog/frontend/css/float.html" class="sidebar-link">浮动和高度塌陷</a></li><li><a href="/vuepressBlog/frontend/css/position.html" class="sidebar-link">定位</a></li><li><a href="/vuepressBlog/frontend/css/fontText.html" class="sidebar-link">字体和文本</a></li><li><a href="/vuepressBlog/frontend/css/background.html" class="sidebar-link">背景</a></li><li><a href="/vuepressBlog/frontend/css/table.html" class="sidebar-link">表格</a></li><li><a href="/vuepressBlog/frontend/css/transitionAndAnimation.html" class="sidebar-link">过渡与动画</a></li><li><a href="/vuepressBlog/frontend/css/less.html" class="sidebar-link">Less</a></li><li><a href="/vuepressBlog/frontend/css/flex.html" class="sidebar-link">Flex 布局</a></li><li><a href="/vuepressBlog/frontend/css/mobile.html" class="sidebar-link">移动端相关</a></li><li><a href="/vuepressBlog/frontend/css/notes.html" class="sidebar-link">实用笔记</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-4e82dffc data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>盒模型</h3> <!----> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><!---->
+            
+          <!---->
+          2023
+        </a></span></div></div> <div data-v-1156296a><main class="page"><section><div class="page-title"><h1 class="title">盒模型</h1> <div data-v-1ff7123e><!----> <!----> <!----> <i class="tags iconfont reco-tag" data-v-1ff7123e><span class="tag-item" data-v-1ff7123e>css</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="p44-文档流"><a href="#p44-文档流" class="header-anchor">#</a> P44 文档流</h2> <p>文档流（normal flow）
+网页是一个多层的结构，一层叠着一层
+最下面一层就是文档流</p> <p>元素在文档流中的特点：
+块元素</p> <div class="language- extra-class"><pre class="language-text"><code>- 块元素会在页面中独占一行
+- 默认宽度是父元素的全部（会把父元素撑满）
+- 默认高度是被内容撑开（子元素）
+</code></pre></div><p>行内元素</p> <div class="language- extra-class"><pre class="language-text"><code>- 行内元素不会独占页面的一行，只占自身的大小
+- 行内元素在页面中从左向右排列，一行容不下，换行
+- 默认的宽高都是被内容撑开的
+</code></pre></div><h2 id="p45-盒模型"><a href="#p45-盒模型" class="header-anchor">#</a> P45 盒模型</h2> <p>一个盒子模型由一下几部分组成：
+1.内容区content
+2.内边距padding
+3.边框border
+4.外边距magin</p> <p>一个样式中的
+width和heigh规定了内容区域的宽高。
+整个盒子的大小是包含以上所有部分的。</p> <h2 id="p46-盒模型-边框"><a href="#p46-盒模型-边框" class="header-anchor">#</a> P46 盒模型-边框</h2> <p>Css中有三个属性来定义边框
+border-width:10px;
+border-color:red;
+border-style:solid;</p> <p>通过border简写属性可以直接定义三个属性，没有先后顺序。</p> <div class="language-css extra-class"><pre class="language-css"><code>border：10px red solid；
+</code></pre></div><p>然后可以根据border-top。。。。
+来定义具体的上下左右的属性
+//右边没有边框
+border：10px red solid；
+border-right：none；</p> <h2 id="p49-水平方向的布局"><a href="#p49-水平方向的布局" class="header-anchor">#</a> P49 水平方向的布局</h2> <p>子元素存在于父元素的内容区中，此时的子元素必须满足一个等式：<br> <strong>margin-left + border-left + padding-left + width + padding-right +border-right + margin-right = 父元素的内容区的width</strong></p> <p>当不满足这个等式的时候，会发生过渡约束，则等式会自动调整。</p> <ul><li>调整的情况</li> <li>如果这 7 个值里面都没有 auto 的时候，则浏览器会自动调整 margin-right 值使等式成立</li> <li>这 7 个值里面有三个值可以设置为auto</li></ul> <ol><li>width</li> <li>margin-left</li> <li>margin-right</li></ol> <ul><li>如果某个值为auto，则会调整auto的值</li> <li>如果有多个值为auto，并且width也是auto的时候，width会调整为最大，设置为auto的margin值会为0</li> <li>如果两个margin为0，则会使子元素在父元素内容区中垂直居中</li></ul> <div class="language-css extra-class"><pre class="language-css"><code>width：xxxpx；
+margin：0 auto；
+</code></pre></div><h2 id="p49-垂直方向的布局"><a href="#p49-垂直方向的布局" class="header-anchor">#</a> P49 垂直方向的布局</h2> <p>如果没有设置height，那么垂直方向父元素的高度是由其内容区 子元素的高度撑开的。</p> <p>例如父元素的样式为box-father，子元素的样式为box-child</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.box-father</span><span class="token punctuation">{</span>
+    width<span class="token punctuation">:</span>200px<span class="token punctuation">;</span>
+    height<span class="token punctuation">:</span>100px<span class="token punctuation">;</span>
+    <span class="token comment">/*
+        子元素如果高度大于父元素，就会溢出
+        在父元素设置overflow可以设置父元素处理溢出部分的方式
+        
+        可选值：
+            visible：默认值，显示溢出部分，不做特殊处理。
+            hidden：溢出的部分被裁减不显示
+            scroll：生成两个滚动条
+            auto：根据需要生成滚动条
+    */</span>
+    overflow<span class="token punctuation">:</span>auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.box-child</span><span class="token punctuation">{</span>
+    width<span class="token punctuation">:</span>100px<span class="token punctuation">;</span>
+    height<span class="token punctuation">:</span>400px<span class="token punctuation">;</span>
+<span class="token property">background-color</span><span class="token punctuation">:</span>green<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="p51-盒子模型-外边距的重叠"><a href="#p51-盒子模型-外边距的重叠" class="header-anchor">#</a> P51 盒子模型-外边距的重叠</h2> <p>在布局中<strong>垂直方向上</strong>的两个外边距会发生折叠。</p> <h3 id="_1-兄弟元素间的垂直外边距重叠"><a href="#_1-兄弟元素间的垂直外边距重叠" class="header-anchor">#</a> 1.兄弟元素间的垂直外边距重叠</h3> <p>1.1 都为正值，两个相邻垂直外边距取大值</p> <p>1.2 一正一负，取两个值的和</p> <p>1.3 都为负值，取绝对值大的数</p> <p><strong>注意</strong>兄弟元素间的外边距重叠是方便我们开发的，不用特殊处理。</p> <h3 id="_2-父子元素间的垂直外边距重叠"><a href="#_2-父子元素间的垂直外边距重叠" class="header-anchor">#</a> 2.父子元素间的垂直外边距重叠</h3> <p><strong>子元素的外边距会传递给父元素，对布局是不利的。</strong>
+处理方法:总的来说就是就是让两个外边距相邻，或者以其他方式实现布局效果。</p> <p>2.1 可以为父元素设置内边距来进行布局，但要注意这样会改变父元素的高度，要减去。</p> <p>2.2 为父元素设置边框，这样也很麻烦。不建议</p> <p>2.3
+2.4</p> <h2 id="p52-行内元素的盒模型"><a href="#p52-行内元素的盒模型" class="header-anchor">#</a> P52 行内元素的盒模型</h2> <h3 id="行内元素的一些特点"><a href="#行内元素的一些特点" class="header-anchor">#</a> 行内元素的一些特点</h3> <ol><li>行内元素不支持设置宽高，都是用内容撑开的</li> <li>可以设置padding border margin ，但是不会影响布局。</li></ol> <h3 id="常用的一些css"><a href="#常用的一些css" class="header-anchor">#</a> 常用的一些css</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/*
+    display 的可选值。
+        inline：元素设置为行内元素
+        block：块元素
+        inline-block：行内块（用的少）
+        none：元素不显示（不占位，直接不渲染）
+*/</span>
+<span class="token property">display</span><span class="token punctuation">:</span>block<span class="token punctuation">;</span>
+
+<span class="token comment">/*
+  visibility 的可选值
+    visible：可见的
+    hidden：隐藏（不可见，但是占位，渲染了）
+*/</span>
+<span class="token property">visibility</span><span class="token punctuation">:</span>visible<span class="token punctuation">;</span>
+</code></pre></div><h2 id="p53-浏览器的默认样式"><a href="#p53-浏览器的默认样式" class="header-anchor">#</a> P53 浏览器的默认样式</h2> <p>默认样式：通常情况下，浏览器会给元素设置默认样式。然而在开发中，我们不希望看到这样的情况，所以有以下有两个解决的办法。
+1.小项目小网页中，直接找到对应的有默认样式的元素，单独去除。</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">*</span><span class="token punctuation">{</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>2.大一些的项目中，直接引入<strong>重置样式表</strong>。可以去下载<strong>https://meyerweb.com/eric/tools/css/reset/</strong>
+或者引入<strong>https://github.com/necolas/normalize.css/blob/v1/normalize.css</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string">&quot;stylesheet&quot;</span> href<span class="token operator">=</span><span class="token string">&quot;./css/reset.css&quot;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string">&quot;stylesheet&quot;</span> href<span class="token operator">=</span><span class="token string">&quot;./css/normalizs.css&quot;</span><span class="token operator">&gt;</span> <span class="token operator">--</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>
+    重置样式表，专门对浏览器的样式进行重置
+    reset<span class="token punctuation">.</span>css 直接去除浏览器的默认样式
+    normalize<span class="token punctuation">.</span>css 对默认样式进行统一
+<span class="token operator">--</span><span class="token operator">&gt;</span>
+</code></pre></div><h2 id="p58-盒子的大小"><a href="#p58-盒子的大小" class="header-anchor">#</a> P58 盒子的大小</h2> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">box1</span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span>100px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span>100px<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span>10px<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span>5px red soild<span class="token punctuation">;</span>
+    
+    <span class="token comment">/*
+        默认情况下，盒子的可见框大小有内容区，内边距，边框决定。
+        box-sizing 用来设置盒子尺寸的计算方式（设置width和height的作用位置）
+            可选值：
+            content-box：默认值，宽度和高度用来设置内容区的大小。
+            border-box：宽度和高度设置 整个盒子可见框的大小。
+    */</span>
+    <span class="token property">box-sizing</span><span class="token punctuation">:</span>border-box<span class="token punctuation">;</span>
+    
+    <span class="token comment">/*
+        因为设置可见框大小，设置border-box有个好处
+        width和height设置多少，盒子的可见框就是多少
+    */</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="p59-轮廓阴影和圆角"><a href="#p59-轮廓阴影和圆角" class="header-anchor">#</a> P59 轮廓阴影和圆角</h2> <p><strong>outline</strong>用来设置元素的轮廓，用法和<strong>border</strong>一样。区别在于不影响布局</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">box1</span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span>200px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span>200px<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span>#bfa<span class="token punctuation">;</span>
+    <span class="token property">outline</span><span class="token punctuation">:</span>10px red solid<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>box-shadow</strong>用来设置设置元素的阴影效果，不影响布局。</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">box1</span><span class="token punctuation">{</span>
+    <span class="token property">widht</span><span class="token punctuation">:</span>200px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span>200px<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span>#bfa<span class="token punctuation">;</span>
+    <span class="token comment">/*
+        box-shadow：用来设置元素的阴影效果，不影响页面布局。
+        第一个值：水平偏移量
+        第二个值：垂直偏移量
+        第三个值：模糊半径
+        第四个值：颜色（一般使用rgba透明色）
+    */</span>
+    <span class="token property">box-shadow</span><span class="token punctuation">:</span>10px 10px 20px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>.4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>border-redius设置盒子</strong>设置圆角，圆角设置的是圆的半径大小。</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">box2</span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span>200px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span>200px<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span>#bfa<span class="token punctuation">;</span>
+    <span class="token comment">/*
+        border—redius:用来设置圆角
+        
+        border-top-left—redius
+        border-top-right-redius
+        border-bottom-right-redius
+        水平半径和垂直半径，可以把那个角设置为椭圆的
+        border-bottom-left-redius：20px 50px；
+    */</span>
+    
+    <span class="token comment">/*
+        一个值：4个角
+        两个值：左上&amp;右下 右上&amp;左下
+        三个值：左上 右上&amp;左下 右下
+        四个值：左上 右上 左下 右下
+    */</span>
+    <span class="token property">border-redius</span><span class="token punctuation">:</span>20px / 40px；
+    <span class="token comment">/*
+        要设置圆角，中间/分割，水平半径和垂直半径
+    */</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">Wednesday, February 8, 2023 9:16 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/vuepressBlog/frontend/css/units.html" class="prev">
+            单位和文档流
+          </a></span> <span class="next"><a href="/vuepressBlog/frontend/css/float.html">
+            浮动和高度塌陷
+          </a></span></p></div> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-70334359><li class="level-2" data-v-70334359><a href="/vuepressBlog/frontend/css/boxModel.html#p44-文档流" class="sidebar-link reco-side-p44-文档流" data-v-70334359>P44 文档流</a></li><li class="level-2" data-v-70334359><a href="/vuepressBlog/frontend/css/boxModel.html#p45-盒模型" class="sidebar-link reco-side-p45-盒模型" data-v-70334359>P45 盒模型</a></li><li class="level-2" data-v-70334359><a href="/vuepressBlog/frontend/css/boxModel.html#p46-盒模型-边框" class="sidebar-link reco-side-p46-盒模型-边框" data-v-70334359>P46 盒模型-边框</a></li><li class="level-2" data-v-70334359><a href="/vuepressBlog/frontend/css/boxModel.html#p49-水平方向的布局" class="sidebar-link reco-side-p49-水平方向的布局" data-v-70334359>P49 水平方向的布局</a></li><li class="level-2" data-v-70334359><a href="/vuepressBlog/frontend/css/boxModel.html#p49-垂直方向的布局" class="sidebar-link reco-side-p49-垂直方向的布局" data-v-70334359>P49 垂直方向的布局</a></li><li class="level-2" data-v-70334359><a href="/vuepressBlog/frontend/css/boxModel.html#p51-盒子模型-外边距的重叠" class="sidebar-link reco-side-p51-盒子模型-外边距的重叠" data-v-70334359>P51 盒子模型-外边距的重叠</a></li><li class="level-3" data-v-70334359><a href="/vuepressBlog/frontend/css/boxModel.html#_1-兄弟元素间的垂直外边距重叠" class="sidebar-link reco-side-_1-兄弟元素间的垂直外边距重叠" data-v-70334359>1.兄弟元素间的垂直外边距重叠</a></li><li class="level-3" data-v-70334359><a href="/vuepressBlog/frontend/css/boxModel.html#_2-父子元素间的垂直外边距重叠" class="sidebar-link reco-side-_2-父子元素间的垂直外边距重叠" data-v-70334359>2.父子元素间的垂直外边距重叠</a></li><li class="level-2" data-v-70334359><a href="/vuepressBlog/frontend/css/boxModel.html#p52-行内元素的盒模型" class="sidebar-link reco-side-p52-行内元素的盒模型" data-v-70334359>P52 行内元素的盒模型</a></li><li class="level-3" data-v-70334359><a href="/vuepressBlog/frontend/css/boxModel.html#行内元素的一些特点" class="sidebar-link reco-side-行内元素的一些特点" data-v-70334359>行内元素的一些特点</a></li><li class="level-3" data-v-70334359><a href="/vuepressBlog/frontend/css/boxModel.html#常用的一些css" class="sidebar-link reco-side-常用的一些css" data-v-70334359>常用的一些css</a></li><li class="level-2" data-v-70334359><a href="/vuepressBlog/frontend/css/boxModel.html#p53-浏览器的默认样式" class="sidebar-link reco-side-p53-浏览器的默认样式" data-v-70334359>P53 浏览器的默认样式</a></li><li class="level-2" data-v-70334359><a href="/vuepressBlog/frontend/css/boxModel.html#p58-盒子的大小" class="sidebar-link reco-side-p58-盒子的大小" data-v-70334359>P58 盒子的大小</a></li><li class="level-2" data-v-70334359><a href="/vuepressBlog/frontend/css/boxModel.html#p59-轮廓阴影和圆角" class="sidebar-link reco-side-p59-轮廓阴影和圆角" data-v-70334359>P59 轮廓阴影和圆角</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><!----><!----><!----></div></div>
+    <script src="/vuepressBlog/assets/js/app.0fce48cc.js" defer></script><script src="/vuepressBlog/assets/js/3.c85b88d9.js" defer></script><script src="/vuepressBlog/assets/js/1.5c331416.js" defer></script><script src="/vuepressBlog/assets/js/46.becd53ea.js" defer></script><script src="/vuepressBlog/assets/js/8.8b440d50.js" defer></script>
+  </body>
+</html>
